@@ -37,7 +37,7 @@
             this.lblPerfil = new System.Windows.Forms.Label();
             this.picVitalSigns = new System.Windows.Forms.PictureBox();
             this.btnEntrar = new System.Windows.Forms.Button();
-            this.linkEsqSenha = new System.Windows.Forms.LinkLabel();
+            this.lnkEsqSenha = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.picVitalSigns)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,22 +109,22 @@
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = true;
             // 
-            // linkEsqSenha
+            // lnkEsqSenha
             // 
-            this.linkEsqSenha.AutoSize = true;
-            this.linkEsqSenha.Location = new System.Drawing.Point(346, 325);
-            this.linkEsqSenha.Name = "linkEsqSenha";
-            this.linkEsqSenha.Size = new System.Drawing.Size(102, 13);
-            this.linkEsqSenha.TabIndex = 9;
-            this.linkEsqSenha.TabStop = true;
-            this.linkEsqSenha.Text = "Esqueceu a senha?";
+            this.lnkEsqSenha.AutoSize = true;
+            this.lnkEsqSenha.Location = new System.Drawing.Point(346, 325);
+            this.lnkEsqSenha.Name = "lnkEsqSenha";
+            this.lnkEsqSenha.Size = new System.Drawing.Size(102, 13);
+            this.lnkEsqSenha.TabIndex = 9;
+            this.lnkEsqSenha.TabStop = true;
+            this.lnkEsqSenha.Text = "Esqueceu a senha?";
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 450);
-            this.Controls.Add(this.linkEsqSenha);
+            this.Controls.Add(this.lnkEsqSenha);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.picVitalSigns);
             this.Controls.Add(this.lblPerfil);
@@ -152,6 +152,6 @@
         private System.Windows.Forms.Label lblPerfil;
         private System.Windows.Forms.PictureBox picVitalSigns;
         private System.Windows.Forms.Button btnEntrar;
-        private System.Windows.Forms.LinkLabel linkEsqSenha;
+        private System.Windows.Forms.LinkLabel lnkEsqSenha;
     }
 }
