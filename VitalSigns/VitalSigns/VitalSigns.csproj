@@ -50,12 +50,6 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\Chamado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Chamado.Designer.cs">
-      <DependentUpon>Chamado.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\Dados.cs">
       <SubType>Form</SubType>
     </Compile>
