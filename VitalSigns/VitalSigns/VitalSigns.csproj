@@ -35,6 +35,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,6 +55,12 @@
     </Compile>
     <Compile Include="UI\Chamado.Designer.cs">
       <DependentUpon>Chamado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dados.Designer.cs">
+      <DependentUpon>Dados.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Localizar Cliente.cs">
       <SubType>Form</SubType>
@@ -76,6 +84,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\Dados.resx">
+      <DependentUpon>Dados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Localizar Cliente.resx">
       <DependentUpon>Localizar Cliente.cs</DependentUpon>
     </EmbeddedResource>

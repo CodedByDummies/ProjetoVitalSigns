@@ -10,21 +10,14 @@ using System.Windows.Forms;
 
 namespace VitalSigns.UI
 {
-    public partial class Login : Form
+    public partial class Dados : Form
     {
-        public Login()
+        public Dados()
         {
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void txtUsuario_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
