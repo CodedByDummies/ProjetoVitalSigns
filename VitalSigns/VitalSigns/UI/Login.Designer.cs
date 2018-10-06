@@ -29,114 +29,114 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblSenha = new System.Windows.Forms.Label();
+            this.cbxPerfil = new System.Windows.Forms.ComboBox();
+            this.lblPerfil = new System.Windows.Forms.Label();
+            this.picVitalSigns = new System.Windows.Forms.PictureBox();
+            this.btnEntrar = new System.Windows.Forms.Button();
+            this.linkEsqSenha = new System.Windows.Forms.LinkLabel();
+            ((System.ComponentModel.ISupportInitialize)(this.picVitalSigns)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox2
+            // txtUsuario
             // 
-            this.textBox2.Location = new System.Drawing.Point(194, 263);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(254, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtUsuario.Location = new System.Drawing.Point(194, 263);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(254, 20);
+            this.txtUsuario.TabIndex = 1;
             // 
-            // textBox3
+            // txtSenha
             // 
-            this.textBox3.Location = new System.Drawing.Point(194, 289);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(254, 20);
-            this.textBox3.TabIndex = 2;
+            this.txtSenha.Location = new System.Drawing.Point(194, 289);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(254, 20);
+            this.txtSenha.TabIndex = 2;
             // 
-            // label1
+            // lblUsuario
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(139, 266);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Usuário:";
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Location = new System.Drawing.Point(139, 266);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(46, 13);
+            this.lblUsuario.TabIndex = 3;
+            this.lblUsuario.Text = "Usuário:";
             // 
-            // label2
+            // lblSenha
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(139, 292);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Senha:";
+            this.lblSenha.AutoSize = true;
+            this.lblSenha.Location = new System.Drawing.Point(139, 292);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Size = new System.Drawing.Size(41, 13);
+            this.lblSenha.TabIndex = 4;
+            this.lblSenha.Text = "Senha:";
             // 
-            // comboBox1
+            // cbxPerfil
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(194, 236);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(254, 21);
-            this.comboBox1.TabIndex = 5;
+            this.cbxPerfil.FormattingEnabled = true;
+            this.cbxPerfil.Location = new System.Drawing.Point(194, 236);
+            this.cbxPerfil.Name = "cbxPerfil";
+            this.cbxPerfil.Size = new System.Drawing.Size(254, 21);
+            this.cbxPerfil.TabIndex = 5;
             // 
-            // label3
+            // lblPerfil
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(139, 239);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Perfil:";
+            this.lblPerfil.AutoSize = true;
+            this.lblPerfil.Location = new System.Drawing.Point(139, 239);
+            this.lblPerfil.Name = "lblPerfil";
+            this.lblPerfil.Size = new System.Drawing.Size(33, 13);
+            this.lblPerfil.TabIndex = 6;
+            this.lblPerfil.Text = "Perfil:";
             // 
-            // pictureBox1
+            // picVitalSigns
             // 
-            this.pictureBox1.Image = global::VitalSigns.Properties.Resources.New_Project;
-            this.pictureBox1.Location = new System.Drawing.Point(208, 95);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(213, 135);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.picVitalSigns.Image = global::VitalSigns.Properties.Resources.New_Project;
+            this.picVitalSigns.Location = new System.Drawing.Point(208, 95);
+            this.picVitalSigns.Name = "picVitalSigns";
+            this.picVitalSigns.Size = new System.Drawing.Size(213, 135);
+            this.picVitalSigns.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picVitalSigns.TabIndex = 7;
+            this.picVitalSigns.TabStop = false;
             // 
-            // button1
+            // btnEntrar
             // 
-            this.button1.Location = new System.Drawing.Point(194, 315);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Entrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnEntrar.Location = new System.Drawing.Point(194, 315);
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.Size = new System.Drawing.Size(75, 23);
+            this.btnEntrar.TabIndex = 8;
+            this.btnEntrar.Text = "Entrar";
+            this.btnEntrar.UseVisualStyleBackColor = true;
             // 
-            // linkLabel1
+            // linkEsqSenha
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(346, 325);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(102, 13);
-            this.linkLabel1.TabIndex = 9;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Esqueceu a senha?";
+            this.linkEsqSenha.AutoSize = true;
+            this.linkEsqSenha.Location = new System.Drawing.Point(346, 325);
+            this.linkEsqSenha.Name = "linkEsqSenha";
+            this.linkEsqSenha.Size = new System.Drawing.Size(102, 13);
+            this.linkEsqSenha.TabIndex = 9;
+            this.linkEsqSenha.TabStop = true;
+            this.linkEsqSenha.Text = "Esqueceu a senha?";
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 450);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.linkEsqSenha);
+            this.Controls.Add(this.btnEntrar);
+            this.Controls.Add(this.picVitalSigns);
+            this.Controls.Add(this.lblPerfil);
+            this.Controls.Add(this.cbxPerfil);
+            this.Controls.Add(this.lblSenha);
+            this.Controls.Add(this.lblUsuario);
+            this.Controls.Add(this.txtSenha);
+            this.Controls.Add(this.txtUsuario);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.Text = "Login";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picVitalSigns)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,14 +144,14 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox txtSenha;
+        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.Label lblSenha;
+        private System.Windows.Forms.ComboBox cbxPerfil;
+        private System.Windows.Forms.Label lblPerfil;
+        private System.Windows.Forms.PictureBox picVitalSigns;
+        private System.Windows.Forms.Button btnEntrar;
+        private System.Windows.Forms.LinkLabel linkEsqSenha;
     }
 }
