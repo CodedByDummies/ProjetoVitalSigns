@@ -16,8 +16,5 @@ namespace VitalSigns.UI
         {
             InitializeComponent();
         }
-
-
-
     }
 }
