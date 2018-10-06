@@ -29,28 +29,29 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pgChamado = new System.Windows.Forms.TabControl();
-            this.Chamado = new System.Windows.Forms.TabPage();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.ViewPrincipal = new System.Windows.Forms.TabControl();
+            this.pgChamado = new System.Windows.Forms.TabPage();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblResidencial = new System.Windows.Forms.Label();
+            this.lblDDDR = new System.Windows.Forms.Label();
+            this.lblCelular = new System.Windows.Forms.Label();
+            this.lblDDDC = new System.Windows.Forms.Label();
+            this.lblCPF_CNPJ = new System.Windows.Forms.Label();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtResidencial = new System.Windows.Forms.TextBox();
+            this.txtDDDR = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.txtDDDC = new System.Windows.Forms.TextBox();
+            this.txtCPF_CNPJ = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.pgVisitaTecnica = new System.Windows.Forms.TabPage();
+            this.pgOS = new System.Windows.Forms.TabPage();
+            this.pgHistorico = new System.Windows.Forms.TabPage();
+            this.lblDadosCliente = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.ViewPrincipal.SuspendLayout();
             this.pgChamado.SuspendLayout();
-            this.Chamado.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -63,197 +64,208 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // ViewPrincipal
+            // 
+            this.ViewPrincipal.Controls.Add(this.pgChamado);
+            this.ViewPrincipal.Controls.Add(this.pgVisitaTecnica);
+            this.ViewPrincipal.Controls.Add(this.pgOS);
+            this.ViewPrincipal.Controls.Add(this.pgHistorico);
+            this.ViewPrincipal.Location = new System.Drawing.Point(12, 99);
+            this.ViewPrincipal.Name = "ViewPrincipal";
+            this.ViewPrincipal.SelectedIndex = 0;
+            this.ViewPrincipal.Size = new System.Drawing.Size(761, 199);
+            this.ViewPrincipal.TabIndex = 2;
+            // 
             // pgChamado
             // 
-            this.pgChamado.Controls.Add(this.Chamado);
-            this.pgChamado.Controls.Add(this.tabPage2);
-            this.pgChamado.Controls.Add(this.tabPage3);
-            this.pgChamado.Controls.Add(this.tabPage4);
-            this.pgChamado.Location = new System.Drawing.Point(12, 99);
+            this.pgChamado.Controls.Add(this.lblDadosCliente);
+            this.pgChamado.Controls.Add(this.lblEmail);
+            this.pgChamado.Controls.Add(this.lblResidencial);
+            this.pgChamado.Controls.Add(this.lblDDDR);
+            this.pgChamado.Controls.Add(this.lblCelular);
+            this.pgChamado.Controls.Add(this.lblDDDC);
+            this.pgChamado.Controls.Add(this.lblCPF_CNPJ);
+            this.pgChamado.Controls.Add(this.lblNome);
+            this.pgChamado.Controls.Add(this.txtEmail);
+            this.pgChamado.Controls.Add(this.txtResidencial);
+            this.pgChamado.Controls.Add(this.txtDDDR);
+            this.pgChamado.Controls.Add(this.textBox4);
+            this.pgChamado.Controls.Add(this.txtDDDC);
+            this.pgChamado.Controls.Add(this.txtCPF_CNPJ);
+            this.pgChamado.Controls.Add(this.txtNome);
+            this.pgChamado.Location = new System.Drawing.Point(4, 22);
             this.pgChamado.Name = "pgChamado";
-            this.pgChamado.SelectedIndex = 0;
-            this.pgChamado.Size = new System.Drawing.Size(761, 199);
-            this.pgChamado.TabIndex = 2;
+            this.pgChamado.Padding = new System.Windows.Forms.Padding(3);
+            this.pgChamado.Size = new System.Drawing.Size(753, 173);
+            this.pgChamado.TabIndex = 0;
+            this.pgChamado.Text = "Chamado";
+            this.pgChamado.UseVisualStyleBackColor = true;
             // 
-            // Chamado
+            // lblEmail
             // 
-            this.Chamado.Controls.Add(this.label7);
-            this.Chamado.Controls.Add(this.label6);
-            this.Chamado.Controls.Add(this.label5);
-            this.Chamado.Controls.Add(this.label4);
-            this.Chamado.Controls.Add(this.label3);
-            this.Chamado.Controls.Add(this.label2);
-            this.Chamado.Controls.Add(this.label1);
-            this.Chamado.Controls.Add(this.textBox7);
-            this.Chamado.Controls.Add(this.textBox5);
-            this.Chamado.Controls.Add(this.textBox6);
-            this.Chamado.Controls.Add(this.textBox4);
-            this.Chamado.Controls.Add(this.textBox3);
-            this.Chamado.Controls.Add(this.textBox2);
-            this.Chamado.Controls.Add(this.textBox1);
-            this.Chamado.Location = new System.Drawing.Point(4, 22);
-            this.Chamado.Name = "Chamado";
-            this.Chamado.Padding = new System.Windows.Forms.Padding(3);
-            this.Chamado.Size = new System.Drawing.Size(753, 173);
-            this.Chamado.TabIndex = 0;
-            this.Chamado.Text = "Chamado";
-            this.Chamado.UseVisualStyleBackColor = true;
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(470, 99);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(38, 13);
+            this.lblEmail.TabIndex = 13;
+            this.lblEmail.Text = "E-mail:";
             // 
-            // label7
+            // lblResidencial
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(474, 76);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "label7";
+            this.lblResidencial.AutoSize = true;
+            this.lblResidencial.Location = new System.Drawing.Point(294, 99);
+            this.lblResidencial.Name = "lblResidencial";
+            this.lblResidencial.Size = new System.Drawing.Size(62, 13);
+            this.lblResidencial.TabIndex = 12;
+            this.lblResidencial.Text = "Residencial";
             // 
-            // label6
+            // lblDDDR
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(298, 76);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "label6";
+            this.lblDDDR.AutoSize = true;
+            this.lblDDDR.Location = new System.Drawing.Point(253, 99);
+            this.lblDDDR.Name = "lblDDDR";
+            this.lblDDDR.Size = new System.Drawing.Size(31, 13);
+            this.lblDDDR.TabIndex = 11;
+            this.lblDDDR.Text = "DDD";
             // 
-            // label5
+            // lblCelular
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(257, 76);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "label5";
+            this.lblCelular.AutoSize = true;
+            this.lblCelular.Location = new System.Drawing.Point(76, 99);
+            this.lblCelular.Name = "lblCelular";
+            this.lblCelular.Size = new System.Drawing.Size(39, 13);
+            this.lblCelular.TabIndex = 10;
+            this.lblCelular.Text = "Celular";
             // 
-            // label4
+            // lblDDDC
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(80, 76);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "label4";
+            this.lblDDDC.AutoSize = true;
+            this.lblDDDC.Location = new System.Drawing.Point(35, 99);
+            this.lblDDDC.Name = "lblDDDC";
+            this.lblDDDC.Size = new System.Drawing.Size(31, 13);
+            this.lblDDDC.TabIndex = 9;
+            this.lblDDDC.Text = "DDD";
             // 
-            // label3
+            // lblCPF_CNPJ
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(39, 76);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "label3";
+            this.lblCPF_CNPJ.AutoSize = true;
+            this.lblCPF_CNPJ.Location = new System.Drawing.Point(529, 46);
+            this.lblCPF_CNPJ.Name = "lblCPF_CNPJ";
+            this.lblCPF_CNPJ.Size = new System.Drawing.Size(65, 13);
+            this.lblCPF_CNPJ.TabIndex = 8;
+            this.lblCPF_CNPJ.Text = "CPF/ CNPJ:";
             // 
-            // label2
+            // lblNome
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(533, 23);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "label2";
+            this.lblNome.AutoSize = true;
+            this.lblNome.Location = new System.Drawing.Point(38, 46);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(38, 13);
+            this.lblNome.TabIndex = 7;
+            this.lblNome.Text = "Nome:";
             // 
-            // label1
+            // txtEmail
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(42, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "label1";
+            this.txtEmail.Location = new System.Drawing.Point(473, 126);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(245, 20);
+            this.txtEmail.TabIndex = 6;
             // 
-            // textBox7
+            // txtResidencial
             // 
-            this.textBox7.Location = new System.Drawing.Point(477, 103);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(213, 20);
-            this.textBox7.TabIndex = 6;
+            this.txtResidencial.Location = new System.Drawing.Point(284, 126);
+            this.txtResidencial.Name = "txtResidencial";
+            this.txtResidencial.Size = new System.Drawing.Size(183, 20);
+            this.txtResidencial.TabIndex = 5;
             // 
-            // textBox5
+            // txtDDDR
             // 
-            this.textBox5.Location = new System.Drawing.Point(288, 103);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(183, 20);
-            this.textBox5.TabIndex = 5;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(260, 103);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(22, 20);
-            this.textBox6.TabIndex = 4;
+            this.txtDDDR.Location = new System.Drawing.Point(256, 126);
+            this.txtDDDR.Name = "txtDDDR";
+            this.txtDDDR.Size = new System.Drawing.Size(22, 20);
+            this.txtDDDR.TabIndex = 4;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(71, 103);
+            this.textBox4.Location = new System.Drawing.Point(67, 126);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(183, 20);
             this.textBox4.TabIndex = 3;
             // 
-            // textBox3
+            // txtDDDC
             // 
-            this.textBox3.Location = new System.Drawing.Point(42, 103);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(23, 20);
-            this.textBox3.TabIndex = 2;
+            this.txtDDDC.Location = new System.Drawing.Point(38, 126);
+            this.txtDDDC.Name = "txtDDDC";
+            this.txtDDDC.Size = new System.Drawing.Size(23, 20);
+            this.txtDDDC.TabIndex = 2;
             // 
-            // textBox2
+            // txtCPF_CNPJ
             // 
-            this.textBox2.Location = new System.Drawing.Point(536, 42);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(154, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtCPF_CNPJ.Location = new System.Drawing.Point(532, 65);
+            this.txtCPF_CNPJ.Name = "txtCPF_CNPJ";
+            this.txtCPF_CNPJ.Size = new System.Drawing.Size(186, 20);
+            this.txtCPF_CNPJ.TabIndex = 1;
             // 
-            // textBox1
+            // txtNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(42, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(488, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtNome.Location = new System.Drawing.Point(38, 65);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(488, 20);
+            this.txtNome.TabIndex = 0;
             // 
-            // tabPage2
+            // pgVisitaTecnica
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(753, 173);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.pgVisitaTecnica.Location = new System.Drawing.Point(4, 22);
+            this.pgVisitaTecnica.Name = "pgVisitaTecnica";
+            this.pgVisitaTecnica.Padding = new System.Windows.Forms.Padding(3);
+            this.pgVisitaTecnica.Size = new System.Drawing.Size(753, 173);
+            this.pgVisitaTecnica.TabIndex = 1;
+            this.pgVisitaTecnica.Text = "Visita Técnica";
+            this.pgVisitaTecnica.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // pgOS
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(753, 173);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.pgOS.Location = new System.Drawing.Point(4, 22);
+            this.pgOS.Name = "pgOS";
+            this.pgOS.Padding = new System.Windows.Forms.Padding(3);
+            this.pgOS.Size = new System.Drawing.Size(753, 173);
+            this.pgOS.TabIndex = 2;
+            this.pgOS.Text = "Ordem de Serviço";
+            this.pgOS.UseVisualStyleBackColor = true;
             // 
-            // tabPage4
+            // pgHistorico
             // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(753, 173);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tabPage4";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.pgHistorico.Location = new System.Drawing.Point(4, 22);
+            this.pgHistorico.Name = "pgHistorico";
+            this.pgHistorico.Padding = new System.Windows.Forms.Padding(3);
+            this.pgHistorico.Size = new System.Drawing.Size(753, 173);
+            this.pgHistorico.TabIndex = 3;
+            this.pgHistorico.Text = "Histórico";
+            this.pgHistorico.UseVisualStyleBackColor = true;
+            // 
+            // lblDadosCliente
+            // 
+            this.lblDadosCliente.AutoSize = true;
+            this.lblDadosCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDadosCliente.Location = new System.Drawing.Point(7, 7);
+            this.lblDadosCliente.Name = "lblDadosCliente";
+            this.lblDadosCliente.Size = new System.Drawing.Size(117, 15);
+            this.lblDadosCliente.TabIndex = 14;
+            this.lblDadosCliente.Text = "Dados do Cliente";
             // 
             // Dados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pgChamado);
+            this.Controls.Add(this.ViewPrincipal);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Dados";
             this.Text = "Dados";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ViewPrincipal.ResumeLayout(false);
             this.pgChamado.ResumeLayout(false);
-            this.Chamado.ResumeLayout(false);
-            this.Chamado.PerformLayout();
+            this.pgChamado.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -261,24 +273,25 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TabControl pgChamado;
-        private System.Windows.Forms.TabPage Chamado;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TabControl ViewPrincipal;
+        private System.Windows.Forms.TabPage pgChamado;
+        private System.Windows.Forms.TabPage pgVisitaTecnica;
+        private System.Windows.Forms.TabPage pgOS;
+        private System.Windows.Forms.TabPage pgHistorico;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblResidencial;
+        private System.Windows.Forms.Label lblDDDR;
+        private System.Windows.Forms.Label lblCelular;
+        private System.Windows.Forms.Label lblDDDC;
+        private System.Windows.Forms.Label lblCPF_CNPJ;
+        private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtResidencial;
+        private System.Windows.Forms.TextBox txtDDDR;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDDDC;
+        private System.Windows.Forms.TextBox txtCPF_CNPJ;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Label lblDadosCliente;
     }
 }
