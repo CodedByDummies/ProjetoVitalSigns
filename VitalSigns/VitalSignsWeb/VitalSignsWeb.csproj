@@ -67,6 +67,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resouces\1.gif" />
+    <Content Include="Resouces\New Project-Recuperado.jpg" />
     <Content Include="Resouces\New-Project.gif" />
     <Content Include="UI\TelaLogin.aspx" />
     <Content Include="Web.config" />
