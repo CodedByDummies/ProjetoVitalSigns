@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VitalSigns.UI;
 
 namespace VitalSigns
 {
@@ -16,7 +17,7 @@ namespace VitalSigns
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form());
+            Application.Run(new frmLogin());
 
         }
     }

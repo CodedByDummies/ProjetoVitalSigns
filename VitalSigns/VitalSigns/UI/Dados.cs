@@ -12,9 +12,6 @@ namespace VitalSigns.UI
 {
     public partial class Dados : Form
     {
-        public Dados()
-        {
-            InitializeComponent();
-        }
+
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Localizar_Cliente));
-            this.cbxEscolhasKey = new System.Windows.Forms.ComboBox();
+            this.cbPesquisa = new System.Windows.Forms.ComboBox();
             this.txtLocalizadorCliente = new System.Windows.Forms.TextBox();
             this.dgwViewChamados = new System.Windows.Forms.DataGridView();
             this.btnLocalizar = new System.Windows.Forms.Button();
@@ -38,17 +38,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgwViewChamados)).BeginInit();
             this.SuspendLayout();
             // 
-            // cbxEscolhasKey
+            // cbPesquisa
             // 
-            this.cbxEscolhasKey.FormattingEnabled = true;
-            this.cbxEscolhasKey.Items.AddRange(new object[] {
+            this.cbPesquisa.FormattingEnabled = true;
+            this.cbPesquisa.Items.AddRange(new object[] {
             "CPF",
             "CNPJ",
             "Chamado"});
-            this.cbxEscolhasKey.Location = new System.Drawing.Point(68, 68);
-            this.cbxEscolhasKey.Name = "cbxEscolhasKey";
-            this.cbxEscolhasKey.Size = new System.Drawing.Size(121, 21);
-            this.cbxEscolhasKey.TabIndex = 0;
+            this.cbPesquisa.Location = new System.Drawing.Point(68, 68);
+            this.cbPesquisa.Name = "cbPesquisa";
+            this.cbPesquisa.Size = new System.Drawing.Size(121, 21);
+            this.cbPesquisa.TabIndex = 0;
             // 
             // txtLocalizadorCliente
             // 
@@ -102,7 +102,7 @@
             this.Controls.Add(this.btnLocalizar);
             this.Controls.Add(this.dgwViewChamados);
             this.Controls.Add(this.txtLocalizadorCliente);
-            this.Controls.Add(this.cbxEscolhasKey);
+            this.Controls.Add(this.cbPesquisa);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Localizar_Cliente";
             this.Text = "Localizar Cliente";
@@ -114,7 +114,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cbxEscolhasKey;
+        private System.Windows.Forms.ComboBox cbPesquisa;
         private System.Windows.Forms.TextBox txtLocalizadorCliente;
         private System.Windows.Forms.DataGridView dgwViewChamados;
         private System.Windows.Forms.Button btnLocalizar;
