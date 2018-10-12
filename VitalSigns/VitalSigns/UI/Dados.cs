@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace VitalSigns.UI
 {
-    public partial class Dados : Form
+    public partial class frmDados : Form
     {
 
     }

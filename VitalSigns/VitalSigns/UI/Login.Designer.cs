@@ -32,10 +32,10 @@
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnentrar = new System.Windows.Forms.Button();
             this.linkesqueceusenha = new System.Windows.Forms.LinkLabel();
             this.txtLogin = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,16 +64,6 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Senha:";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::VitalSigns.Properties.Resources.New_Project;
-            this.pictureBox1.Location = new System.Drawing.Point(214, 122);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(213, 135);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnentrar
             // 
             this.btnentrar.Location = new System.Drawing.Point(194, 315);
@@ -100,6 +90,16 @@
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(254, 20);
             this.txtLogin.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::VitalSigns.Properties.Resources.New_Project;
+            this.pictureBox1.Location = new System.Drawing.Point(214, 122);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(213, 135);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // frmLogin
             // 

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace VitalSigns.UI
 {
-    public partial class frmLocalizarCliente : Form
+    public partial class TelaDePerfil : Form
     {
-        public frmLocalizarCliente()
+        public TelaDePerfil()
         {
             InitializeComponent();
         }

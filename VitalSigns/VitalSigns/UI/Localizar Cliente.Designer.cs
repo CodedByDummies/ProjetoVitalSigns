@@ -1,6 +1,6 @@
 ﻿namespace VitalSigns.UI
 {
-    partial class Localizar_Cliente
+    partial class frmLocalizarCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Localizar_Cliente));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLocalizarCliente));
             this.cbPesquisa = new System.Windows.Forms.ComboBox();
             this.txtLocalizadorCliente = new System.Windows.Forms.TextBox();
             this.dgwViewChamados = new System.Windows.Forms.DataGridView();
             this.btnLocalizar = new System.Windows.Forms.Button();
             this.btnNovoChamado = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwViewChamados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,11 +93,21 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Tipo Pesquisa:";
             // 
-            // Localizar_Cliente
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(68, 415);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(109, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // frmLocalizarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnNovoChamado);
             this.Controls.Add(this.btnLocalizar);
@@ -104,7 +115,7 @@
             this.Controls.Add(this.txtLocalizadorCliente);
             this.Controls.Add(this.cbPesquisa);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Localizar_Cliente";
+            this.Name = "frmLocalizarCliente";
             this.Text = "Localizar Cliente";
             ((System.ComponentModel.ISupportInitialize)(this.dgwViewChamados)).EndInit();
             this.ResumeLayout(false);
@@ -120,5 +131,6 @@
         private System.Windows.Forms.Button btnLocalizar;
         private System.Windows.Forms.Button btnNovoChamado;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

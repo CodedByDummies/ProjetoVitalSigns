@@ -1,6 +1,6 @@
 ﻿namespace VitalSigns.UI
 {
-    partial class Dados
+    partial class frmDados
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDados));
             this.ViewPrincipal = new System.Windows.Forms.TabControl();
             this.pgChamado = new System.Windows.Forms.TabPage();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -52,20 +52,11 @@
             this.pgOS = new System.Windows.Forms.TabPage();
             this.pgHistorico = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ViewPrincipal.SuspendLayout();
             this.pgChamado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::VitalSigns.Properties.Resources.New_Project;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(79, 43);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // ViewPrincipal
             // 
@@ -284,7 +275,17 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Chamado:";
             // 
-            // Dados
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::VitalSigns.Properties.Resources.New_Project;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(79, 43);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // frmDados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -292,12 +293,13 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ViewPrincipal);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Dados";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "frmDados";
             this.Text = "Dados";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ViewPrincipal.ResumeLayout(false);
             this.pgChamado.ResumeLayout(false);
             this.pgChamado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
