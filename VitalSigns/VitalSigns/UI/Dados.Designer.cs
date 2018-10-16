@@ -53,17 +53,20 @@
             this.pgHistorico = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.ViewPrincipal.SuspendLayout();
             this.pgChamado.SuspendLayout();
+            this.pgOS.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ViewPrincipal
             // 
             this.ViewPrincipal.Controls.Add(this.pgChamado);
-            this.ViewPrincipal.Controls.Add(this.pgVisitaTecnica);
             this.ViewPrincipal.Controls.Add(this.pgOS);
             this.ViewPrincipal.Controls.Add(this.pgHistorico);
+            this.ViewPrincipal.Controls.Add(this.pgVisitaTecnica);
             this.ViewPrincipal.Location = new System.Drawing.Point(12, 61);
             this.ViewPrincipal.Name = "ViewPrincipal";
             this.ViewPrincipal.SelectedIndex = 0;
@@ -248,6 +251,8 @@
             // 
             // pgOS
             // 
+            this.pgOS.Controls.Add(this.listView1);
+            this.pgOS.Controls.Add(this.textBox3);
             this.pgOS.Location = new System.Drawing.Point(4, 22);
             this.pgOS.Name = "pgOS";
             this.pgOS.Padding = new System.Windows.Forms.Padding(3);
@@ -285,6 +290,22 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(389, 37);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(328, 270);
+            this.textBox3.TabIndex = 0;
+            // 
+            // listView1
+            // 
+            this.listView1.Location = new System.Drawing.Point(22, 37);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(361, 270);
+            this.listView1.TabIndex = 1;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
             // frmDados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -299,6 +320,8 @@
             this.ViewPrincipal.ResumeLayout(false);
             this.pgChamado.ResumeLayout(false);
             this.pgChamado.PerformLayout();
+            this.pgOS.ResumeLayout(false);
+            this.pgOS.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -331,5 +354,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
