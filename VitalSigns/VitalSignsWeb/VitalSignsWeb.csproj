@@ -70,11 +70,19 @@
     <Content Include="Resouces\1.gif" />
     <Content Include="Resouces\New Project-Recuperado.jpg" />
     <Content Include="Resouces\New-Project.gif" />
+    <Content Include="UI\Localizar Cliente.aspx" />
     <Content Include="UI\TelaLogin.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Localizar Cliente.aspx.cs">
+      <DependentUpon>Localizar Cliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Localizar Cliente.aspx.designer.cs">
+      <DependentUpon>Localizar Cliente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UI\TelaLogin.aspx.cs">
       <DependentUpon>TelaLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
