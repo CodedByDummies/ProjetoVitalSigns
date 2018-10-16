@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDados));
             this.ViewPrincipal = new System.Windows.Forms.TabControl();
             this.pgChamado = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.lblDadosCliente = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
@@ -40,7 +39,6 @@
             this.lblCelular = new System.Windows.Forms.Label();
             this.lblDDDC = new System.Windows.Forms.Label();
             this.lblCPF_CNPJ = new System.Windows.Forms.Label();
-            this.lblNome = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtResidencial = new System.Windows.Forms.TextBox();
             this.txtDDDR = new System.Windows.Forms.TextBox();
@@ -48,13 +46,15 @@
             this.txtDDDC = new System.Windows.Forms.TextBox();
             this.txtCPF_CNPJ = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.pgVisitaTecnica = new System.Windows.Forms.TabPage();
             this.pgOS = new System.Windows.Forms.TabPage();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.pgHistorico = new System.Windows.Forms.TabPage();
+            this.pgVisitaTecnica = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.ViewPrincipal.SuspendLayout();
             this.pgChamado.SuspendLayout();
             this.pgOS.SuspendLayout();
@@ -99,14 +99,6 @@
             this.pgChamado.TabIndex = 0;
             this.pgChamado.Text = "Chamado";
             this.pgChamado.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(37, 159);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(680, 154);
-            this.textBox1.TabIndex = 17;
             // 
             // button1
             // 
@@ -181,15 +173,6 @@
             this.lblCPF_CNPJ.TabIndex = 8;
             this.lblCPF_CNPJ.Text = "CPF/ CNPJ:";
             // 
-            // lblNome
-            // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(37, 26);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(38, 13);
-            this.lblNome.TabIndex = 7;
-            this.lblNome.Text = "Nome:";
-            // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(472, 100);
@@ -239,16 +222,6 @@
             this.txtNome.Size = new System.Drawing.Size(488, 20);
             this.txtNome.TabIndex = 0;
             // 
-            // pgVisitaTecnica
-            // 
-            this.pgVisitaTecnica.Location = new System.Drawing.Point(4, 22);
-            this.pgVisitaTecnica.Name = "pgVisitaTecnica";
-            this.pgVisitaTecnica.Padding = new System.Windows.Forms.Padding(3);
-            this.pgVisitaTecnica.Size = new System.Drawing.Size(753, 351);
-            this.pgVisitaTecnica.TabIndex = 1;
-            this.pgVisitaTecnica.Text = "Visita Técnica";
-            this.pgVisitaTecnica.UseVisualStyleBackColor = true;
-            // 
             // pgOS
             // 
             this.pgOS.Controls.Add(this.listView1);
@@ -261,6 +234,22 @@
             this.pgOS.Text = "Ordem de Serviço";
             this.pgOS.UseVisualStyleBackColor = true;
             // 
+            // listView1
+            // 
+            this.listView1.Location = new System.Drawing.Point(22, 37);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(361, 270);
+            this.listView1.TabIndex = 1;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(389, 37);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(328, 270);
+            this.textBox3.TabIndex = 0;
+            // 
             // pgHistorico
             // 
             this.pgHistorico.Location = new System.Drawing.Point(4, 22);
@@ -270,6 +259,16 @@
             this.pgHistorico.TabIndex = 3;
             this.pgHistorico.Text = "Histórico";
             this.pgHistorico.UseVisualStyleBackColor = true;
+            // 
+            // pgVisitaTecnica
+            // 
+            this.pgVisitaTecnica.Location = new System.Drawing.Point(4, 22);
+            this.pgVisitaTecnica.Name = "pgVisitaTecnica";
+            this.pgVisitaTecnica.Padding = new System.Windows.Forms.Padding(3);
+            this.pgVisitaTecnica.Size = new System.Drawing.Size(753, 351);
+            this.pgVisitaTecnica.TabIndex = 1;
+            this.pgVisitaTecnica.Text = "Visita Técnica";
+            this.pgVisitaTecnica.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -290,21 +289,22 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox3
+            // lblNome
             // 
-            this.textBox3.Location = new System.Drawing.Point(389, 37);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(328, 270);
-            this.textBox3.TabIndex = 0;
+            this.lblNome.AutoSize = true;
+            this.lblNome.Location = new System.Drawing.Point(37, 26);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(38, 13);
+            this.lblNome.TabIndex = 7;
+            this.lblNome.Text = "Nome:";
             // 
-            // listView1
+            // textBox1
             // 
-            this.listView1.Location = new System.Drawing.Point(22, 37);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(361, 270);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.textBox1.Location = new System.Drawing.Point(37, 159);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(680, 154);
+            this.textBox1.TabIndex = 17;
             // 
             // frmDados
             // 
@@ -342,7 +342,6 @@
         private System.Windows.Forms.Label lblCelular;
         private System.Windows.Forms.Label lblDDDC;
         private System.Windows.Forms.Label lblCPF_CNPJ;
-        private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtResidencial;
         private System.Windows.Forms.TextBox txtDDDR;
@@ -352,9 +351,10 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblDadosCliente;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblNome;
     }
 }
