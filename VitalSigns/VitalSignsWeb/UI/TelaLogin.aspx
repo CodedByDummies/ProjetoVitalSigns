@@ -12,7 +12,7 @@
             margin-left: 174px;
             margin-right: 203px;
             margin-top: 54px;
-            font-family: Microsoft Sans Serif; 8,25pt;
+            font-family: Arial, Helvetica, sans-serif; 
         }
     </style>
 </head>
@@ -22,7 +22,7 @@
         <div>
             <asp:Label ID="Label1" runat="server" Text="Login:"></asp:Label>
             <asp:TextBox ID="TextBox1" runat="server" Height="16px" Width="275px" style="margin-left: 24px; margin-top: 18px; margin-bottom: 0px;"></asp:TextBox>
-            <p><asp:Label ID="Label2" runat="server" Text="Senha:"></asp:Label>
+            <p /><asp:Label ID="Label2" runat="server" Text="Senha:"></asp:Label>
         <asp:TextBox ID="TextBox2" runat="server" style="margin-left: 16px; margin-top: 0px; margin-bottom: 0px; margin-right: 1px;" Width="274px"></asp:TextBox>
         
             </div>
