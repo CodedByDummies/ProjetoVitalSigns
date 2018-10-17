@@ -111,15 +111,18 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BLL\" />
-    <Folder Include="DAL\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\New-Project.gif" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VitalSignsDLL\VitalSignsDLL.csproj">
+      <Project>{f41d814d-d06f-4bb8-8921-97f3d9b78eea}</Project>
+      <Name>VitalSignsDLL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
