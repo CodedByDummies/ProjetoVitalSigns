@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDados));
-            this.ViewPrincipal = new System.Windows.Forms.TabControl();
+            this.vptcDados = new System.Windows.Forms.TabControl();
             this.pgChamado = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.btnSalvarDados = new System.Windows.Forms.Button();
             this.lblDadosCliente = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblResidencial = new System.Windows.Forms.Label();
@@ -39,44 +40,45 @@
             this.lblCelular = new System.Windows.Forms.Label();
             this.lblDDDC = new System.Windows.Forms.Label();
             this.lblCPF_CNPJ = new System.Windows.Forms.Label();
+            this.lblNome = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtResidencial = new System.Windows.Forms.TextBox();
-            this.txtDDDR = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.txtDDDC = new System.Windows.Forms.TextBox();
-            this.txtCPF_CNPJ = new System.Windows.Forms.TextBox();
+            this.txtDddRes = new System.Windows.Forms.TextBox();
+            this.txtCel = new System.Windows.Forms.TextBox();
+            this.txtDddCel = new System.Windows.Forms.TextBox();
+            this.txtCpfCnpj = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.pgOS = new System.Windows.Forms.TabPage();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.lvOrdemServico = new System.Windows.Forms.ListView();
+            this.txtOrdemServico = new System.Windows.Forms.TextBox();
             this.pgHistorico = new System.Windows.Forms.TabPage();
             this.pgVisitaTecnica = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblNome = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.ViewPrincipal.SuspendLayout();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.vptcDados.SuspendLayout();
             this.pgChamado.SuspendLayout();
             this.pgOS.SuspendLayout();
+            this.pgHistorico.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // ViewPrincipal
+            // vptcDados
             // 
-            this.ViewPrincipal.Controls.Add(this.pgChamado);
-            this.ViewPrincipal.Controls.Add(this.pgOS);
-            this.ViewPrincipal.Controls.Add(this.pgHistorico);
-            this.ViewPrincipal.Controls.Add(this.pgVisitaTecnica);
-            this.ViewPrincipal.Location = new System.Drawing.Point(12, 61);
-            this.ViewPrincipal.Name = "ViewPrincipal";
-            this.ViewPrincipal.SelectedIndex = 0;
-            this.ViewPrincipal.Size = new System.Drawing.Size(761, 377);
-            this.ViewPrincipal.TabIndex = 2;
+            this.vptcDados.Controls.Add(this.pgChamado);
+            this.vptcDados.Controls.Add(this.pgOS);
+            this.vptcDados.Controls.Add(this.pgHistorico);
+            this.vptcDados.Controls.Add(this.pgVisitaTecnica);
+            this.vptcDados.Location = new System.Drawing.Point(12, 61);
+            this.vptcDados.Name = "vptcDados";
+            this.vptcDados.SelectedIndex = 0;
+            this.vptcDados.Size = new System.Drawing.Size(761, 377);
+            this.vptcDados.TabIndex = 2;
             // 
             // pgChamado
             // 
-            this.pgChamado.Controls.Add(this.textBox1);
-            this.pgChamado.Controls.Add(this.button1);
+            this.pgChamado.Controls.Add(this.txtDescricao);
+            this.pgChamado.Controls.Add(this.btnSalvarDados);
             this.pgChamado.Controls.Add(this.lblDadosCliente);
             this.pgChamado.Controls.Add(this.lblEmail);
             this.pgChamado.Controls.Add(this.lblResidencial);
@@ -87,10 +89,10 @@
             this.pgChamado.Controls.Add(this.lblNome);
             this.pgChamado.Controls.Add(this.txtEmail);
             this.pgChamado.Controls.Add(this.txtResidencial);
-            this.pgChamado.Controls.Add(this.txtDDDR);
-            this.pgChamado.Controls.Add(this.textBox4);
-            this.pgChamado.Controls.Add(this.txtDDDC);
-            this.pgChamado.Controls.Add(this.txtCPF_CNPJ);
+            this.pgChamado.Controls.Add(this.txtDddRes);
+            this.pgChamado.Controls.Add(this.txtCel);
+            this.pgChamado.Controls.Add(this.txtDddCel);
+            this.pgChamado.Controls.Add(this.txtCpfCnpj);
             this.pgChamado.Controls.Add(this.txtNome);
             this.pgChamado.Location = new System.Drawing.Point(4, 22);
             this.pgChamado.Name = "pgChamado";
@@ -100,14 +102,22 @@
             this.pgChamado.Text = "Chamado";
             this.pgChamado.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // txtDescricao
             // 
-            this.button1.Location = new System.Drawing.Point(642, 319);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Salvar ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.txtDescricao.Location = new System.Drawing.Point(37, 159);
+            this.txtDescricao.Multiline = true;
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(680, 154);
+            this.txtDescricao.TabIndex = 17;
+            // 
+            // btnSalvarDados
+            // 
+            this.btnSalvarDados.Location = new System.Drawing.Point(642, 319);
+            this.btnSalvarDados.Name = "btnSalvarDados";
+            this.btnSalvarDados.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvarDados.TabIndex = 16;
+            this.btnSalvarDados.Text = "Salvar ";
+            this.btnSalvarDados.UseVisualStyleBackColor = true;
             // 
             // lblDadosCliente
             // 
@@ -173,6 +183,15 @@
             this.lblCPF_CNPJ.TabIndex = 8;
             this.lblCPF_CNPJ.Text = "CPF/ CNPJ:";
             // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Location = new System.Drawing.Point(37, 26);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(38, 13);
+            this.lblNome.TabIndex = 7;
+            this.lblNome.Text = "Nome:";
+            // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(472, 100);
@@ -187,33 +206,33 @@
             this.txtResidencial.Size = new System.Drawing.Size(183, 20);
             this.txtResidencial.TabIndex = 5;
             // 
-            // txtDDDR
+            // txtDddRes
             // 
-            this.txtDDDR.Location = new System.Drawing.Point(255, 100);
-            this.txtDDDR.Name = "txtDDDR";
-            this.txtDDDR.Size = new System.Drawing.Size(22, 20);
-            this.txtDDDR.TabIndex = 4;
+            this.txtDddRes.Location = new System.Drawing.Point(255, 100);
+            this.txtDddRes.Name = "txtDddRes";
+            this.txtDddRes.Size = new System.Drawing.Size(22, 20);
+            this.txtDddRes.TabIndex = 4;
             // 
-            // textBox4
+            // txtCel
             // 
-            this.textBox4.Location = new System.Drawing.Point(66, 100);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(183, 20);
-            this.textBox4.TabIndex = 3;
+            this.txtCel.Location = new System.Drawing.Point(66, 100);
+            this.txtCel.Name = "txtCel";
+            this.txtCel.Size = new System.Drawing.Size(183, 20);
+            this.txtCel.TabIndex = 3;
             // 
-            // txtDDDC
+            // txtDddCel
             // 
-            this.txtDDDC.Location = new System.Drawing.Point(37, 100);
-            this.txtDDDC.Name = "txtDDDC";
-            this.txtDDDC.Size = new System.Drawing.Size(23, 20);
-            this.txtDDDC.TabIndex = 2;
+            this.txtDddCel.Location = new System.Drawing.Point(37, 100);
+            this.txtDddCel.Name = "txtDddCel";
+            this.txtDddCel.Size = new System.Drawing.Size(23, 20);
+            this.txtDddCel.TabIndex = 2;
             // 
-            // txtCPF_CNPJ
+            // txtCpfCnpj
             // 
-            this.txtCPF_CNPJ.Location = new System.Drawing.Point(531, 45);
-            this.txtCPF_CNPJ.Name = "txtCPF_CNPJ";
-            this.txtCPF_CNPJ.Size = new System.Drawing.Size(186, 20);
-            this.txtCPF_CNPJ.TabIndex = 1;
+            this.txtCpfCnpj.Location = new System.Drawing.Point(531, 45);
+            this.txtCpfCnpj.Name = "txtCpfCnpj";
+            this.txtCpfCnpj.Size = new System.Drawing.Size(186, 20);
+            this.txtCpfCnpj.TabIndex = 1;
             // 
             // txtNome
             // 
@@ -224,8 +243,8 @@
             // 
             // pgOS
             // 
-            this.pgOS.Controls.Add(this.listView1);
-            this.pgOS.Controls.Add(this.textBox3);
+            this.pgOS.Controls.Add(this.lvOrdemServico);
+            this.pgOS.Controls.Add(this.txtOrdemServico);
             this.pgOS.Location = new System.Drawing.Point(4, 22);
             this.pgOS.Name = "pgOS";
             this.pgOS.Padding = new System.Windows.Forms.Padding(3);
@@ -234,24 +253,25 @@
             this.pgOS.Text = "Ordem de Serviço";
             this.pgOS.UseVisualStyleBackColor = true;
             // 
-            // listView1
+            // lvOrdemServico
             // 
-            this.listView1.Location = new System.Drawing.Point(22, 37);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(361, 270);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.lvOrdemServico.Location = new System.Drawing.Point(22, 37);
+            this.lvOrdemServico.Name = "lvOrdemServico";
+            this.lvOrdemServico.Size = new System.Drawing.Size(361, 270);
+            this.lvOrdemServico.TabIndex = 1;
+            this.lvOrdemServico.UseCompatibleStateImageBehavior = false;
             // 
-            // textBox3
+            // txtOrdemServico
             // 
-            this.textBox3.Location = new System.Drawing.Point(389, 37);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(328, 270);
-            this.textBox3.TabIndex = 0;
+            this.txtOrdemServico.Location = new System.Drawing.Point(389, 37);
+            this.txtOrdemServico.Multiline = true;
+            this.txtOrdemServico.Name = "txtOrdemServico";
+            this.txtOrdemServico.Size = new System.Drawing.Size(328, 270);
+            this.txtOrdemServico.TabIndex = 0;
             // 
             // pgHistorico
             // 
+            this.pgHistorico.Controls.Add(this.listView1);
             this.pgHistorico.Location = new System.Drawing.Point(4, 22);
             this.pgHistorico.Name = "pgHistorico";
             this.pgHistorico.Padding = new System.Windows.Forms.Padding(3);
@@ -289,22 +309,13 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // lblNome
+            // listView1
             // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(37, 26);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(38, 13);
-            this.lblNome.TabIndex = 7;
-            this.lblNome.Text = "Nome:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(37, 159);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(680, 154);
-            this.textBox1.TabIndex = 17;
+            this.listView1.Location = new System.Drawing.Point(65, 53);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(623, 270);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // frmDados
             // 
@@ -312,16 +323,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.ViewPrincipal);
+            this.Controls.Add(this.vptcDados);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDados";
             this.Text = "Dados";
-            this.ViewPrincipal.ResumeLayout(false);
+            this.vptcDados.ResumeLayout(false);
             this.pgChamado.ResumeLayout(false);
             this.pgChamado.PerformLayout();
             this.pgOS.ResumeLayout(false);
             this.pgOS.PerformLayout();
+            this.pgHistorico.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -331,7 +343,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TabControl ViewPrincipal;
+        private System.Windows.Forms.TabControl vptcDados;
         private System.Windows.Forms.TabPage pgChamado;
         private System.Windows.Forms.TabPage pgVisitaTecnica;
         private System.Windows.Forms.TabPage pgOS;
@@ -344,17 +356,18 @@
         private System.Windows.Forms.Label lblCPF_CNPJ;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtResidencial;
-        private System.Windows.Forms.TextBox txtDDDR;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox txtDDDC;
-        private System.Windows.Forms.TextBox txtCPF_CNPJ;
+        private System.Windows.Forms.TextBox txtDddRes;
+        private System.Windows.Forms.TextBox txtCel;
+        private System.Windows.Forms.TextBox txtDddCel;
+        private System.Windows.Forms.TextBox txtCpfCnpj;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblDadosCliente;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnSalvarDados;
+        private System.Windows.Forms.ListView lvOrdemServico;
+        private System.Windows.Forms.TextBox txtOrdemServico;
+        private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.ListView listView1;
     }
 }
