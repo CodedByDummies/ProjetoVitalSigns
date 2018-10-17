@@ -1,7 +1,5 @@
-﻿using System;
-using System.Data;
+﻿using System.Data;
 using System.Data.Common;
-using MySql.Data.Common;
 using MySql.Data.MySqlClient;
 
 namespace VitalSignsDLL.DAL
@@ -20,12 +18,14 @@ namespace VitalSignsDLL.DAL
 
         public DbDataReader ExecutarConsulta(string cmd)
         {
-            throw new NotImplementedException();
+            MySqlCommand command = new MySqlCommand(cmd, this.connection);
+            return command.ExecuteReader();
         }
 
         public int ExecutarSemConsulta(string cmd)
         {
-            throw new NotImplementedException();
+            MySqlCommand command = new MySqlCommand(cmd, this.connection);
+            return command.ExecuteNonQuery();
         }
 
         public ConnectionState FecharConecao()
