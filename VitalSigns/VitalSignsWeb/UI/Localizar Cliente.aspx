@@ -20,9 +20,9 @@
             <asp:DropDownList ID="ddlPesquisa" runat="server" style="margin-left: 5px; margin-top: 0px; margin-bottom: 0px;" Height="20px" Width="155px" AutoPostBack="True" ></asp:DropDownList>
             <asp:TextBox ID="txtLocalizadorCliente" runat="server" Width="529px" style="margin-left: 5px; margin-top: 0px; margin-bottom: 0px;" Height="16px" ></asp:TextBox>
             <asp:Button ID="btnLocalizar" runat="server" Text="Localizar" style="margin-left: 5px;" Width="80px"/>
-            <asp:GridView ID="GridView1" runat="server" Height="277px" Width="782px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" style="margin-top: 20px; margin-left: 5px;"></asp:GridView>
-            <asp:Button ID="btnCriarPerfil" runat="server" Text="Criar Perfil" style="margin-left: 5px; margin-top: 20px;" Height="26px" Width="75px"/>
-            <asp:Button ID="btnNovoChamado" runat="server" Text="Novo Chamado" style="margin-left: 632px;" Height="26px" Width="75px"/>
+            <asp:GridView ID="gwViewChamado" runat="server" Height="277px" Width="782px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" style="margin-top: 20px; margin-left: 5px;"></asp:GridView>
+            <asp:Button ID="btnCriarPerfil" runat="server" Text="Criar Perfil" style="margin-left: 5px; margin-top: 20px;" Height="24px" Width="150px"/>
+            <asp:Button ID="btnNovoChamado" runat="server" Text="Novo Chamado" style="margin-left: 480px; margin-right: 0px;" Height="24px" Width="150px"/>
         </div>
     </form>
 </body>
