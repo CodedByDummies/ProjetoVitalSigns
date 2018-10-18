@@ -72,6 +72,7 @@
             this.btnentrar.TabIndex = 8;
             this.btnentrar.Text = "Entrar";
             this.btnentrar.UseVisualStyleBackColor = true;
+            this.btnentrar.Click += new System.EventHandler(this.btnentrar_Click);
             // 
             // linkesqueceusenha
             // 

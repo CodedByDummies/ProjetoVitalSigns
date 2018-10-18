@@ -4,9 +4,9 @@ using MySql.Data.MySqlClient;
 
 namespace VitalSignsDLL.DAL
 {
-    class ConexaoMySQL : IConexao
+    public class ConexaoMySQL : IConexao
     {
-        private string connString = "";
+        private string connString = "server=localhost;user id=root;database=helpdesk;persistsecurityinfo=True;password=sua_senha;SslMode=None";
         private MySqlConnection connection;
 
         public ConnectionState AbrirConexao()
