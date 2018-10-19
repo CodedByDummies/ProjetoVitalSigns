@@ -71,6 +71,7 @@
     <Content Include="UI\Localizar Cliente.aspx" />
     <Content Include="UI\Tela de Perfil.aspx" />
     <Content Include="UI\TelaLogin.aspx" />
+    <Content Include="UI\Cadastro Cliente.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -95,6 +96,13 @@
     </Compile>
     <Compile Include="UI\TelaLogin.aspx.designer.cs">
       <DependentUpon>TelaLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Cadastro Cliente.aspx.cs">
+      <DependentUpon>Cadastro Cliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Cadastro Cliente.aspx.designer.cs">
+      <DependentUpon>Cadastro Cliente.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
