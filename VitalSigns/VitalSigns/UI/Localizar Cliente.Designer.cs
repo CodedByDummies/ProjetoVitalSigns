@@ -32,16 +32,16 @@
             this.cbPesquisa = new System.Windows.Forms.ComboBox();
             this.txtLocalizadorCliente = new System.Windows.Forms.TextBox();
             this.dgwViewChamados = new System.Windows.Forms.DataGridView();
-            this.btnLocalizar = new System.Windows.Forms.Button();
-            this.btnNovoChamado = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnCriarPerfil = new System.Windows.Forms.Button();
-            this.btnNovoCliente = new System.Windows.Forms.Button();
             this.cpf_cnpj_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nome_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefone_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.e_mail_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cep_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnLocalizar = new System.Windows.Forms.Button();
+            this.btnNovoChamado = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnCriarPerfil = new System.Windows.Forms.Button();
+            this.btnNovoCliente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwViewChamados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,6 +80,36 @@
             this.dgwViewChamados.ReadOnly = true;
             this.dgwViewChamados.Size = new System.Drawing.Size(663, 292);
             this.dgwViewChamados.TabIndex = 2;
+            // 
+            // cpf_cnpj_column
+            // 
+            this.cpf_cnpj_column.HeaderText = "CPF_CNPJ";
+            this.cpf_cnpj_column.Name = "cpf_cnpj_column";
+            this.cpf_cnpj_column.ReadOnly = true;
+            // 
+            // nome_column
+            // 
+            this.nome_column.HeaderText = "Nome";
+            this.nome_column.Name = "nome_column";
+            this.nome_column.ReadOnly = true;
+            // 
+            // telefone_column
+            // 
+            this.telefone_column.HeaderText = "Telefone";
+            this.telefone_column.Name = "telefone_column";
+            this.telefone_column.ReadOnly = true;
+            // 
+            // e_mail_column
+            // 
+            this.e_mail_column.HeaderText = "e-mail";
+            this.e_mail_column.Name = "e_mail_column";
+            this.e_mail_column.ReadOnly = true;
+            // 
+            // cep_column
+            // 
+            this.cep_column.HeaderText = "CEP";
+            this.cep_column.Name = "cep_column";
+            this.cep_column.ReadOnly = true;
             // 
             // btnLocalizar
             // 
@@ -127,36 +157,7 @@
             this.btnNovoCliente.TabIndex = 7;
             this.btnNovoCliente.Text = "Novo Cliente";
             this.btnNovoCliente.UseVisualStyleBackColor = true;
-            // 
-            // cpf_cnpj_column
-            // 
-            this.cpf_cnpj_column.HeaderText = "CPF_CNPJ";
-            this.cpf_cnpj_column.Name = "cpf_cnpj_column";
-            this.cpf_cnpj_column.ReadOnly = true;
-            // 
-            // nome_column
-            // 
-            this.nome_column.HeaderText = "Nome";
-            this.nome_column.Name = "nome_column";
-            this.nome_column.ReadOnly = true;
-            // 
-            // telefone_column
-            // 
-            this.telefone_column.HeaderText = "Telefone";
-            this.telefone_column.Name = "telefone_column";
-            this.telefone_column.ReadOnly = true;
-            // 
-            // e_mail_column
-            // 
-            this.e_mail_column.HeaderText = "e-mail";
-            this.e_mail_column.Name = "e_mail_column";
-            this.e_mail_column.ReadOnly = true;
-            // 
-            // cep_column
-            // 
-            this.cep_column.HeaderText = "CEP";
-            this.cep_column.Name = "cep_column";
-            this.cep_column.ReadOnly = true;
+            this.btnNovoCliente.Click += new System.EventHandler(this.btnNovoCliente_Click);
             // 
             // frmLocalizarCliente
             // 

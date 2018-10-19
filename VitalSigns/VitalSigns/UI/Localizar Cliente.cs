@@ -73,5 +73,11 @@ namespace VitalSigns.UI
         {
             dgwViewChamados.Rows.Clear();
         }
+
+        private void btnNovoCliente_Click(object sender, EventArgs e)
+        {
+            new frmCadastroCliente().ShowDialog();
+
+        }
     }
 }
