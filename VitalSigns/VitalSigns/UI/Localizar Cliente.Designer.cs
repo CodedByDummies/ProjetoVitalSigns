@@ -37,6 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnCriarPerfil = new System.Windows.Forms.Button();
             this.btnNovoCliente = new System.Windows.Forms.Button();
+            this.lnkLogout = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgwViewChamados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,6 +52,7 @@
             this.cbPesquisa.Name = "cbPesquisa";
             this.cbPesquisa.Size = new System.Drawing.Size(121, 21);
             this.cbPesquisa.TabIndex = 0;
+            this.cbPesquisa.SelectionChangeCommitted += new System.EventHandler(this.cbPesquisa_SelectionChangeCommitted);
             // 
             // txtLocalizadorCliente
             // 
@@ -75,7 +77,6 @@
             this.btnLocalizar.TabIndex = 3;
             this.btnLocalizar.Text = "Localizar";
             this.btnLocalizar.UseVisualStyleBackColor = true;
-            this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
             // 
             // btnNovoChamado
             // 
@@ -114,11 +115,22 @@
             this.btnNovoCliente.Text = "Novo Cliente";
             this.btnNovoCliente.UseVisualStyleBackColor = true;
             // 
+            // lnkLogout
+            // 
+            this.lnkLogout.AutoSize = true;
+            this.lnkLogout.Location = new System.Drawing.Point(676, 22);
+            this.lnkLogout.Name = "lnkLogout";
+            this.lnkLogout.Size = new System.Drawing.Size(40, 13);
+            this.lnkLogout.TabIndex = 8;
+            this.lnkLogout.TabStop = true;
+            this.lnkLogout.Text = "Logout";
+            // 
             // frmLocalizarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lnkLogout);
             this.Controls.Add(this.btnNovoCliente);
             this.Controls.Add(this.btnCriarPerfil);
             this.Controls.Add(this.label1);
@@ -150,5 +162,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCriarPerfil;
         private System.Windows.Forms.Button btnNovoCliente;
+        private System.Windows.Forms.LinkLabel lnkLogout;
     }
 }

@@ -6,6 +6,9 @@ namespace VitalSignsDLL.DAL
 {
     public class ConexaoMySQL : IConexao
     {
+        //#Etecia238#
+        //deadrifter@85
+        
         private string connString = "server=localhost;user id=root;database=testepim;persistsecurityinfo=True;password=;SslMode=None";
         private MySqlConnection connection;
 
