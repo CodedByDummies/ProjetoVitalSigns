@@ -1,8 +1,8 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Data;
-using System.Data.Common;
 using System.Windows.Forms;
+using VitalSignsDLL.BLL;
 using VitalSignsDLL.DAL;
 
 namespace VitalSigns.UI
@@ -24,22 +24,58 @@ namespace VitalSigns.UI
             IConexao conexao = new ConexaoMySQL();
             if (conexao.AbrirConexao() == ConnectionState.Open)
             {
+                string login = txtLogin.Text;
+                string senha = txtSenha.Text;
 
-                Console.WriteLine("Conectou!!!");
+                string sql = string.Format("SELECT idPerfil FROM usuarios where login = '{0}' and senha = '{1}'", login, senha);
 
-                MySqlDataReader dataReader = (MySqlDataReader) conexao.ExecutarConsulta("select login from usuarios");
+                MySqlDataReader dataReader = (MySqlDataReader)conexao.ExecutarConsulta(sql);
 
-                while(dataReader.Read())
+                while (dataReader.Read())
                 {
-                    Console.WriteLine(dataReader.GetString(0));
+                    switch (dataReader[0])
+                    {
+                        case (int)Perfis.Administrador:
+                            dataReader.Close();
+                            conexao.FecharConecao();
+                            this.Hide();
+                            new frmLocalizarCliente(Perfis.Administrador).Show();
+                            return;
+
+                        case (int)Perfis.Gerente:
+                            dataReader.Close();
+                            conexao.FecharConecao();
+                            this.Hide();
+                            new frmLocalizarCliente(Perfis.Gerente).Show();
+                            return;
+
+                        case (int)Perfis.Atendente:
+                            dataReader.Close();
+                            conexao.FecharConecao();
+                            this.Hide();
+                            new frmLocalizarCliente(Perfis.Atendente).Show();
+                            return;
+
+                        case (int)Perfis.Tecnico_Alocado:
+                            dataReader.Close();
+                            conexao.FecharConecao();
+                            this.Hide();
+                            new frmLocalizarCliente(Perfis.Tecnico_Alocado).Show();
+                            return;
+
+                        case (int)Perfis.Técnico_Campo:
+                            dataReader.Close();
+                            conexao.FecharConecao();
+                            this.Hide();
+                            new frmLocalizarCliente(Perfis.Técnico_Campo).Show();
+                            return;
+                    }
                 }
 
                 dataReader.Close();
-                Console.WriteLine("Data Reader Closed!!!");
+                conexao.FecharConecao();
+                MessageBox.Show("Usuário não identificado", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            conexao.FecharConecao();
-            Console.WriteLine("Conexão fechada!!!");
         }
     }
 }

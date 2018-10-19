@@ -117,7 +117,11 @@
             this.Controls.Add(this.cbPesquisa);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLocalizarCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Localizar Cliente";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLocalizarCliente_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmLocalizarCliente_FormClosed);
+            this.Load += new System.EventHandler(this.frmLocalizarCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwViewChamados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -46,6 +46,7 @@
     <Compile Include="BLL\Clientes.cs" />
     <Compile Include="BLL\Enderecos.cs" />
     <Compile Include="BLL\Estados.cs" />
+    <Compile Include="BLL\Perfis.cs" />
     <Compile Include="BLL\TestDataBase.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="DAL\CidadesDAO.cs" />
