@@ -23,5 +23,7 @@
             get { return this.idEstados; }
             set { this.idEstados = value; }
         }
+
+
     }
 }
