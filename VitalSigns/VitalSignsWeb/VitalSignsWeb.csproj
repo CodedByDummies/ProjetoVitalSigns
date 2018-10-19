@@ -69,6 +69,7 @@
     <Content Include="Resouces\New Project-Recuperado.jpg" />
     <Content Include="Resouces\New-Project.gif" />
     <Content Include="UI\Localizar Cliente.aspx" />
+    <Content Include="UI\Tela de Perfil.aspx" />
     <Content Include="UI\TelaLogin.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -80,6 +81,13 @@
     </Compile>
     <Compile Include="UI\Localizar Cliente.aspx.designer.cs">
       <DependentUpon>Localizar Cliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Tela de Perfil.aspx.cs">
+      <DependentUpon>Tela de Perfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Tela de Perfil.aspx.designer.cs">
+      <DependentUpon>Tela de Perfil.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI\TelaLogin.aspx.cs">
       <DependentUpon>TelaLogin.aspx</DependentUpon>
