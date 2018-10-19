@@ -3,14 +3,14 @@ using System.Data;
 
 namespace VitalSignsDLL.DAL
 {
-    interface IConexao
+    public interface IConexao
     {
         ConnectionState AbrirConexao();
 
         ConnectionState FecharConecao();
 
-         int ExecutarSemConsulta(string cmd);
+        int ExecutarSemConsulta(string cmd);
 
-         DbDataReader ExecutarConsulta(string cmd);
+        DbDataReader ExecutarConsulta(string cmd);
     }
 }

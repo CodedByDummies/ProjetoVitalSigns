@@ -42,13 +42,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\Cidades.cs" />
+    <Compile Include="BLL\Clientes.cs" />
+    <Compile Include="BLL\Enderecos.cs" />
+    <Compile Include="BLL\Estados.cs" />
+    <Compile Include="BLL\Perfis.cs" />
+    <Compile Include="BLL\TestDataBase.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="DAL\CidadesDAO.cs" />
+    <Compile Include="DAL\ClientesDAO.cs" />
+    <Compile Include="DAL\EnderecosDAO.cs" />
+    <Compile Include="DAL\EstadosDAO.cs" />
     <Compile Include="DAL\IConexao.cs" />
     <Compile Include="DAL\ConexaoMySQL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BLL\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,14 +1,12 @@
-﻿using System;
-using System.Data;
+﻿using System.Data;
 using System.Data.Common;
-using MySql.Data.Common;
 using MySql.Data.MySqlClient;
 
 namespace VitalSignsDLL.DAL
 {
-    class ConexaoMySQL : IConexao
+    public class ConexaoMySQL : IConexao
     {
-        private string connString = "";
+        private string connString = "server=localhost;user id=root;database=testepim;persistsecurityinfo=True;password=#Etecia238#;SslMode=None";
         private MySqlConnection connection;
 
         public ConnectionState AbrirConexao()
@@ -20,12 +18,14 @@ namespace VitalSignsDLL.DAL
 
         public DbDataReader ExecutarConsulta(string cmd)
         {
-            throw new NotImplementedException();
+            MySqlCommand command = new MySqlCommand(cmd, this.connection);
+            return command.ExecuteReader();
         }
 
         public int ExecutarSemConsulta(string cmd)
         {
-            throw new NotImplementedException();
+            MySqlCommand command = new MySqlCommand(cmd, this.connection);
+            return command.ExecuteNonQuery();
         }
 
         public ConnectionState FecharConecao()
