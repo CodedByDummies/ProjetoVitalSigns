@@ -1,12 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using VitalSignsDLL.BLL;
 using VitalSignsDLL.DAL;
@@ -43,6 +37,8 @@ namespace VitalSigns.UI
 
         private void btnLocalizar_Click(object sender, EventArgs e)
         {
+            LimparGridView();
+
             IConexao conexao = new ConexaoMySQL();
 
             if (conexao.AbrirConexao() == ConnectionState.Open)
@@ -51,15 +47,31 @@ namespace VitalSigns.UI
                 string sql = string.Format("SELECT cpf_cnpj,nome,telefone,e_mail,endereco_cep FROM clientes where cpf_cnpj = '{0}'", cpf_cnpj);
                 MySqlDataReader dataReader = (MySqlDataReader)conexao.ExecutarConsulta(sql);
 
-                while (dataReader.Read())
+                if (dataReader.HasRows)
                 {
-                    Console.WriteLine(dataReader[0] + " | "+ dataReader[1] + " | "+ dataReader[2] + " | " + dataReader [3] + " | " + dataReader[4]);
+                    while (dataReader.Read())
+                    {
+                        Clientes cliente = new Clientes();
+                        cliente.CPF_CNPJ = dataReader[0].ToString();
+                        cliente.Nome = dataReader[1].ToString();
+                        cliente.Telefone = dataReader[2].ToString();
+                        cliente.E_mail = dataReader[3].ToString();
+                        cliente.CEP = dataReader[4].ToString();
+                        dgwViewChamados.Rows.Add(new object[] {cliente.CPF_CNPJ, cliente.Nome, cliente.Telefone, cliente.E_mail, cliente.CEP });
+                    }
+                    dataReader.Close();
+                    conexao.FecharConecao();
+                    return;
                 }
                 dataReader.Close();
                 conexao.FecharConecao();
-               // MessageBox.Show("Cliente não localizado", "Clientes", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Cliente não localizado", "Clientes", MessageBoxButtons.OK, MessageBoxIcon.Error);
+             }
+        }
 
-            }
+        private void LimparGridView()
+        {
+            dgwViewChamados.Rows.Clear();
         }
     }
 }
