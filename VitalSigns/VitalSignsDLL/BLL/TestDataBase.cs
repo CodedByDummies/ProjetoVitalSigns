@@ -25,7 +25,7 @@ namespace VitalSignsDLL.BLL
 
             }
 
-            conexao.FecharConecao();
+            conexao.FecharConexao();
         }
     }
 }
