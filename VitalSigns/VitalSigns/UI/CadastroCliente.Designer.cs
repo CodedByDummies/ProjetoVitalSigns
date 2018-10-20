@@ -103,21 +103,21 @@
             this.txtNomeCadastro.Location = new System.Drawing.Point(6, 21);
             this.txtNomeCadastro.Name = "txtNomeCadastro";
             this.txtNomeCadastro.Size = new System.Drawing.Size(608, 20);
-            this.txtNomeCadastro.TabIndex = 4;
+            this.txtNomeCadastro.TabIndex = 1;
             // 
             // txtCpfCadastro
             // 
             this.txtCpfCadastro.Location = new System.Drawing.Point(6, 66);
             this.txtCpfCadastro.Name = "txtCpfCadastro";
             this.txtCpfCadastro.Size = new System.Drawing.Size(229, 20);
-            this.txtCpfCadastro.TabIndex = 4;
+            this.txtCpfCadastro.TabIndex = 2;
             // 
             // txtEmailCadastro
             // 
             this.txtEmailCadastro.Location = new System.Drawing.Point(241, 66);
             this.txtEmailCadastro.Name = "txtEmailCadastro";
             this.txtEmailCadastro.Size = new System.Drawing.Size(373, 20);
-            this.txtEmailCadastro.TabIndex = 4;
+            this.txtEmailCadastro.TabIndex = 3;
             // 
             // txtDddTelCadastro
             // 
@@ -131,7 +131,7 @@
             this.txtTelefoneCadastro.Location = new System.Drawing.Point(63, 112);
             this.txtTelefoneCadastro.Name = "txtTelefoneCadastro";
             this.txtTelefoneCadastro.Size = new System.Drawing.Size(240, 20);
-            this.txtTelefoneCadastro.TabIndex = 4;
+            this.txtTelefoneCadastro.TabIndex = 5;
             // 
             // panel1
             // 
@@ -171,68 +171,68 @@
             // cbEstadoCadastro
             // 
             this.cbEstadoCadastro.FormattingEnabled = true;
-            this.cbEstadoCadastro.Location = new System.Drawing.Point(309, 246);
+            this.cbEstadoCadastro.Location = new System.Drawing.Point(3, 246);
             this.cbEstadoCadastro.Name = "cbEstadoCadastro";
             this.cbEstadoCadastro.Size = new System.Drawing.Size(305, 21);
-            this.cbEstadoCadastro.TabIndex = 5;
+            this.cbEstadoCadastro.TabIndex = 13;
             this.cbEstadoCadastro.SelectionChangeCommitted += new System.EventHandler(this.cbEstadoCadastro_SelectionChangeCommitted);
             // 
             // cbCidadeCadastro
             // 
             this.cbCidadeCadastro.FormattingEnabled = true;
-            this.cbCidadeCadastro.Location = new System.Drawing.Point(6, 246);
+            this.cbCidadeCadastro.Location = new System.Drawing.Point(317, 246);
             this.cbCidadeCadastro.Name = "cbCidadeCadastro";
             this.cbCidadeCadastro.Size = new System.Drawing.Size(297, 21);
-            this.cbCidadeCadastro.TabIndex = 5;
+            this.cbCidadeCadastro.TabIndex = 14;
             // 
             // txtCelularCadastro
             // 
             this.txtCelularCadastro.Location = new System.Drawing.Point(374, 112);
             this.txtCelularCadastro.Name = "txtCelularCadastro";
             this.txtCelularCadastro.Size = new System.Drawing.Size(240, 20);
-            this.txtCelularCadastro.TabIndex = 4;
+            this.txtCelularCadastro.TabIndex = 7;
             // 
             // txtNumeroCadastro
             // 
             this.txtNumeroCadastro.Location = new System.Drawing.Point(260, 155);
             this.txtNumeroCadastro.Name = "txtNumeroCadastro";
             this.txtNumeroCadastro.Size = new System.Drawing.Size(61, 20);
-            this.txtNumeroCadastro.TabIndex = 4;
+            this.txtNumeroCadastro.TabIndex = 9;
             // 
             // txtDddCelularCadastro
             // 
             this.txtDddCelularCadastro.Location = new System.Drawing.Point(317, 112);
             this.txtDddCelularCadastro.Name = "txtDddCelularCadastro";
             this.txtDddCelularCadastro.Size = new System.Drawing.Size(51, 20);
-            this.txtDddCelularCadastro.TabIndex = 4;
+            this.txtDddCelularCadastro.TabIndex = 6;
             // 
             // txtComplementoCadastro
             // 
             this.txtComplementoCadastro.Location = new System.Drawing.Point(327, 155);
             this.txtComplementoCadastro.Name = "txtComplementoCadastro";
             this.txtComplementoCadastro.Size = new System.Drawing.Size(287, 20);
-            this.txtComplementoCadastro.TabIndex = 4;
+            this.txtComplementoCadastro.TabIndex = 10;
             // 
             // TxtCepCadastro
             // 
             this.TxtCepCadastro.Location = new System.Drawing.Point(6, 200);
             this.TxtCepCadastro.Name = "TxtCepCadastro";
             this.TxtCepCadastro.Size = new System.Drawing.Size(162, 20);
-            this.TxtCepCadastro.TabIndex = 4;
+            this.TxtCepCadastro.TabIndex = 11;
             // 
             // txtBairroCadastro
             // 
             this.txtBairroCadastro.Location = new System.Drawing.Point(174, 200);
             this.txtBairroCadastro.Name = "txtBairroCadastro";
             this.txtBairroCadastro.Size = new System.Drawing.Size(440, 20);
-            this.txtBairroCadastro.TabIndex = 4;
+            this.txtBairroCadastro.TabIndex = 12;
             // 
             // txtLougradouroCadastro
             // 
             this.txtLougradouroCadastro.Location = new System.Drawing.Point(6, 155);
             this.txtLougradouroCadastro.Name = "txtLougradouroCadastro";
             this.txtLougradouroCadastro.Size = new System.Drawing.Size(248, 20);
-            this.txtLougradouroCadastro.TabIndex = 4;
+            this.txtLougradouroCadastro.TabIndex = 8;
             // 
             // label5
             // 
@@ -255,7 +255,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(306, 230);
+            this.label12.Location = new System.Drawing.Point(3, 230);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(40, 13);
             this.label12.TabIndex = 3;
@@ -264,7 +264,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(3, 230);
+            this.label11.Location = new System.Drawing.Point(314, 230);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(40, 13);
             this.label11.TabIndex = 3;

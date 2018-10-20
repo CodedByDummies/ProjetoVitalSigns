@@ -9,7 +9,7 @@ namespace VitalSignsDLL.DAL
         //#Etecia238#
         //deadrifter@85
         
-        private string connString = "server=localhost;user id=root;database=testepim;persistsecurityinfo=True;password=;SslMode=None";
+        private string connString = "server=localhost;user id=root;database=testepim;persistsecurityinfo=True;password=deadrifter@85;SslMode=None";
         private MySqlConnection connection;
 
         public ConnectionState AbrirConexao()
