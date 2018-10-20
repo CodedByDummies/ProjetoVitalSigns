@@ -82,6 +82,7 @@
     <Compile Include="UI\Localizar Cliente.aspx.designer.cs">
       <DependentUpon>Localizar Cliente.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UI\MySqlDataReader.cs" />
     <Compile Include="UI\Tela de Perfil.aspx.cs">
       <DependentUpon>Tela de Perfil.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

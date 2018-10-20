@@ -77,5 +77,10 @@ namespace VitalSigns.UI
                 MessageBox.Show("Usuário não identificado", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void txtLogin_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
