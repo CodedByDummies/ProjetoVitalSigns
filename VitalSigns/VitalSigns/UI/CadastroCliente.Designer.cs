@@ -56,9 +56,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnSalvarCadastroCliente = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.btnSalvarCadastroCliente = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -165,7 +165,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(33, 57);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(622, 303);
+            this.panel1.Size = new System.Drawing.Size(644, 316);
             this.panel1.TabIndex = 5;
             // 
             // cbEstadoCadastro
@@ -305,14 +305,14 @@
             this.label6.TabIndex = 3;
             this.label6.Text = "Lougradouro";
             // 
-            // btnSalvarCadastroCliente
+            // label14
             // 
-            this.btnSalvarCadastroCliente.Location = new System.Drawing.Point(580, 389);
-            this.btnSalvarCadastroCliente.Name = "btnSalvarCadastroCliente";
-            this.btnSalvarCadastroCliente.Size = new System.Drawing.Size(75, 23);
-            this.btnSalvarCadastroCliente.TabIndex = 6;
-            this.btnSalvarCadastroCliente.Text = "Salvar";
-            this.btnSalvarCadastroCliente.UseVisualStyleBackColor = true;
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(314, 96);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(31, 13);
+            this.label14.TabIndex = 3;
+            this.label14.Text = "DDD";
             // 
             // label13
             // 
@@ -323,14 +323,14 @@
             this.label13.TabIndex = 3;
             this.label13.Text = "DDD";
             // 
-            // label14
+            // btnSalvarCadastroCliente
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(314, 96);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(31, 13);
-            this.label14.TabIndex = 3;
-            this.label14.Text = "DDD";
+            this.btnSalvarCadastroCliente.Location = new System.Drawing.Point(580, 389);
+            this.btnSalvarCadastroCliente.Name = "btnSalvarCadastroCliente";
+            this.btnSalvarCadastroCliente.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvarCadastroCliente.TabIndex = 6;
+            this.btnSalvarCadastroCliente.Text = "Salvar";
+            this.btnSalvarCadastroCliente.UseVisualStyleBackColor = true;
             // 
             // frmCadastroCliente
             // 
