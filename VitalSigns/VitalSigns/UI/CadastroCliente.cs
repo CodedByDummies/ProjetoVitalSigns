@@ -3,12 +3,14 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
+using VitalSignsDLL.BLL;
 using VitalSignsDLL.DAL;
 
 namespace VitalSigns.UI
 {
     public partial class frmCadastroCliente : Form
     {
+        private List<Cidades> cidades;
 
         public frmCadastroCliente()
         {
@@ -30,21 +32,40 @@ namespace VitalSigns.UI
                 string logradouro = txtLougradouroCadastro.Text;
                 int num = int.Parse(txtNumeroCadastro.Text);
                 string complemento = txtComplementoCadastro.Text;
-                int idCidade = cbCidadeCadastro.SelectedIndex;
+                long idCidade = this.cidades[cbCidadeCadastro.SelectedIndex].IdCidades;
+
                 string insertEndereco = string.Format("insert into Enderecos values ('{0}', '{1}', '{2}', {3}, '{4}', {5})",
                     cep, bairro, logradouro, num, complemento, idCidade);
+
                 int insertEnderecoRowsAffected = conexao.ExecutarSemConsulta(insertEndereco);
 
+                if (insertEnderecoRowsAffected > 0)
+                {
+                    string cpf_cnpj = txtCpfCadastro.Text;
+                    string nome = txtNomeCadastro.Text;
+                    string tel = txtTelefoneCadastro.Text;
+                    string e_mail = txtEmailCadastro.Text;
+                    string insertCliente = string.Format("insert into Clientes values ('{0}', '{1}', '{2}', '{3}', '{4}')", cpf_cnpj, nome, tel, e_mail, cep);
 
-                string cpf_cnpj = txtCpfCadastro.Text;
-                string nome = txtNomeCadastro.Text;
-                string tel = txtTelefoneCadastro.Text;
-                string e_mail = txtEmailCadastro.Text;
-                string insertCliente = string.Format("insert into Clientes values ('{0}', '{1}', '{2}', '{3}', '{4}')", cpf_cnpj, nome, tel, e_mail, cep);
-                int insertClienteRowsAffected = conexao.ExecutarSemConsulta(insertCliente);
+                    int insertClienteRowsAffected = conexao.ExecutarSemConsulta(insertCliente);
+
+                    if (insertClienteRowsAffected > 0)
+                    {
+                        MessageBox.Show("Cliente cadastrado!", "Cliente Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cliente não cadastrado", "Cadastrar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Endereço não cadastrado", "Cadastrar Endereço", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
 
                 conexao.FecharConexao();
-
             }
             else
             {
@@ -86,18 +107,35 @@ namespace VitalSigns.UI
 
             if (conexao.AbrirConexao() == ConnectionState.Open)
             {
-                string selectCidades = string.Format("SELECT nome FROM cidades where estados_idEstados = {0}", cbEstadoCadastro.SelectedIndex + 1);
+                string selectCidades = string.Format("SELECT idCidades, nome, estados_idEstados FROM cidades where estados_idEstados = {0}",
+                    cbEstadoCadastro.SelectedIndex + 1);
 
-                MySqlDataReader dataReader = (MySqlDataReader) conexao.ExecutarConsulta(selectCidades);
+                MySqlDataReader dataReader = (MySqlDataReader)conexao.ExecutarConsulta(selectCidades);
 
-                List<string> cidades = new List<string>();
+                if (this.cidades != null)
+                {
+                    this.cidades.Clear();
+                }
+                else
+                {
+                    this.cidades = new List<Cidades>();
+                }
+
+                List<string> cidadesNomes = new List<string>();
 
                 while (dataReader.HasRows && dataReader.Read())
                 {
-                    cidades.Add(dataReader["nome"].ToString());
+                    Cidades cidade = new Cidades();
+                    cidade.IdCidades = long.Parse(dataReader["idCidades"].ToString());
+                    cidade.Nome = dataReader["nome"].ToString();
+                    cidade.IdEstados = long.Parse(dataReader["estados_idEstados"].ToString());
+
+                    cidades.Add(cidade);
+
+                    cidadesNomes.Add(dataReader["nome"].ToString());
                 }
 
-                cbCidadeCadastro.DataSource = cidades;
+                cbCidadeCadastro.DataSource = cidadesNomes;
 
                 dataReader.Close();
                 conexao.FecharConexao();
