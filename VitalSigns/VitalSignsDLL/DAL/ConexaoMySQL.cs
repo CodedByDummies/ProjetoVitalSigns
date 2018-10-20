@@ -9,7 +9,7 @@ namespace VitalSignsDLL.DAL
         //#Etecia238#
         //deadrifter@85
         
-        private string connString = "server=localhost;user id=root;database=testepim;persistsecurityinfo=True;password=;SslMode=None";
+        private string connString = "server=localhost;user id=root;database=testepim;persistsecurityinfo=True;password=#Etecia238#;SslMode=None";
         private MySqlConnection connection;
 
         public ConnectionState AbrirConexao()
@@ -31,7 +31,7 @@ namespace VitalSignsDLL.DAL
             return command.ExecuteNonQuery();
         }
 
-        public ConnectionState FecharConecao()
+        public ConnectionState FecharConexao()
         {
             this.connection.Close();
             return this.connection.State;

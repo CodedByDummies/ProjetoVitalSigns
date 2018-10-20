@@ -28,11 +28,8 @@ namespace VitalSigns.UI
 
         private void frmLocalizarCliente_FormClosing(object sender, FormClosingEventArgs e)
         {
-        }
-
-        private void frmLocalizarCliente_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            // DialogResult dr = MessageBox.Show("Deseja sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            //DialogResult dr = MessageBox.Show("Deseja sair?", "Fechar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            Application.Exit();
         }
 
         private void btnLocalizar_Click(object sender, EventArgs e)
@@ -57,16 +54,16 @@ namespace VitalSigns.UI
                         cliente.Telefone = dataReader[2].ToString();
                         cliente.E_mail = dataReader[3].ToString();
                         cliente.CEP = dataReader[4].ToString();
-                        dgwViewChamados.Rows.Add(new object[] {cliente.CPF_CNPJ, cliente.Nome, cliente.Telefone, cliente.E_mail, cliente.CEP });
+                        dgwViewChamados.Rows.Add(new object[] { cliente.CPF_CNPJ, cliente.Nome, cliente.Telefone, cliente.E_mail, cliente.CEP });
                     }
                     dataReader.Close();
-                    conexao.FecharConecao();
+                    conexao.FecharConexao();
                     return;
                 }
                 dataReader.Close();
-                conexao.FecharConecao();
+                conexao.FecharConexao();
                 MessageBox.Show("Cliente não localizado", "Clientes", MessageBoxButtons.OK, MessageBoxIcon.Error);
-             }
+            }
         }
 
         private void LimparGridView()
@@ -77,7 +74,6 @@ namespace VitalSigns.UI
         private void btnNovoCliente_Click(object sender, EventArgs e)
         {
             new frmCadastroCliente().ShowDialog();
-
         }
     }
 }

@@ -175,6 +175,7 @@
             this.cbEstadoCadastro.Name = "cbEstadoCadastro";
             this.cbEstadoCadastro.Size = new System.Drawing.Size(305, 21);
             this.cbEstadoCadastro.TabIndex = 5;
+            this.cbEstadoCadastro.SelectionChangeCommitted += new System.EventHandler(this.cbEstadoCadastro_SelectionChangeCommitted);
             // 
             // cbCidadeCadastro
             // 
@@ -341,9 +342,11 @@
             this.Controls.Add(this.btnSalvarCadastroCliente);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmCadastroCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Cliente";
+            this.Load += new System.EventHandler(this.frmCadastroCliente_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
