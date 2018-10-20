@@ -170,16 +170,22 @@
             // 
             // cbEstadoCadastro
             // 
+            this.cbEstadoCadastro.DropDownHeight = 100;
+            this.cbEstadoCadastro.DropDownWidth = 297;
             this.cbEstadoCadastro.FormattingEnabled = true;
+            this.cbEstadoCadastro.IntegralHeight = false;
             this.cbEstadoCadastro.Location = new System.Drawing.Point(3, 246);
             this.cbEstadoCadastro.Name = "cbEstadoCadastro";
             this.cbEstadoCadastro.Size = new System.Drawing.Size(305, 21);
             this.cbEstadoCadastro.TabIndex = 13;
+            this.cbEstadoCadastro.SelectedIndexChanged += new System.EventHandler(this.cbEstadoCadastro_SelectedIndexChanged);
             this.cbEstadoCadastro.SelectionChangeCommitted += new System.EventHandler(this.cbEstadoCadastro_SelectionChangeCommitted);
             // 
             // cbCidadeCadastro
             // 
+            this.cbCidadeCadastro.DropDownHeight = 90;
             this.cbCidadeCadastro.FormattingEnabled = true;
+            this.cbCidadeCadastro.IntegralHeight = false;
             this.cbCidadeCadastro.Location = new System.Drawing.Point(317, 246);
             this.cbCidadeCadastro.Name = "cbCidadeCadastro";
             this.cbCidadeCadastro.Size = new System.Drawing.Size(297, 21);

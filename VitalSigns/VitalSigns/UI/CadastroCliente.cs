@@ -145,5 +145,10 @@ namespace VitalSigns.UI
                 MessageBox.Show("Não foi possível conectar-se ao Banco de Dados", "Falha na Conexão", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void cbEstadoCadastro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
