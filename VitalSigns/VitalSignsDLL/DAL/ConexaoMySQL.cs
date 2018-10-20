@@ -31,7 +31,7 @@ namespace VitalSignsDLL.DAL
             return command.ExecuteNonQuery();
         }
 
-        public ConnectionState FecharConecao()
+        public ConnectionState FecharConexao()
         {
             this.connection.Close();
             return this.connection.State;

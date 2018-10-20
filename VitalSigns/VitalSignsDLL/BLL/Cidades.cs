@@ -1,6 +1,6 @@
 ﻿namespace VitalSignsDLL.BLL
 {
-    class Cidades
+    public class Cidades
     {
         private long idCidades;
         private string nome;

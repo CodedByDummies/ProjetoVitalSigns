@@ -1,6 +1,6 @@
 ﻿namespace VitalSignsDLL.BLL
 {
-    class Clientes
+    public class Clientes
     {
         private string cpf_cnpj;
         private string nome;

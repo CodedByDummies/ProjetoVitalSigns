@@ -32,12 +32,16 @@
             this.cbPesquisa = new System.Windows.Forms.ComboBox();
             this.txtLocalizadorCliente = new System.Windows.Forms.TextBox();
             this.dgwViewChamados = new System.Windows.Forms.DataGridView();
+            this.cpf_cnpj_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nome_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefone_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.e_mail_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cep_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnLocalizar = new System.Windows.Forms.Button();
             this.btnNovoChamado = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCriarPerfil = new System.Windows.Forms.Button();
             this.btnNovoCliente = new System.Windows.Forms.Button();
-            this.lnkLogout = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgwViewChamados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +56,6 @@
             this.cbPesquisa.Name = "cbPesquisa";
             this.cbPesquisa.Size = new System.Drawing.Size(121, 21);
             this.cbPesquisa.TabIndex = 0;
-            this.cbPesquisa.SelectionChangeCommitted += new System.EventHandler(this.cbPesquisa_SelectionChangeCommitted);
             // 
             // txtLocalizadorCliente
             // 
@@ -63,11 +66,50 @@
             // 
             // dgwViewChamados
             // 
+            this.dgwViewChamados.AllowUserToAddRows = false;
+            this.dgwViewChamados.AllowUserToDeleteRows = false;
             this.dgwViewChamados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwViewChamados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cpf_cnpj_column,
+            this.nome_column,
+            this.telefone_column,
+            this.e_mail_column,
+            this.cep_column});
             this.dgwViewChamados.Location = new System.Drawing.Point(68, 117);
             this.dgwViewChamados.Name = "dgwViewChamados";
+            this.dgwViewChamados.ReadOnly = true;
             this.dgwViewChamados.Size = new System.Drawing.Size(663, 292);
             this.dgwViewChamados.TabIndex = 2;
+            // 
+            // cpf_cnpj_column
+            // 
+            this.cpf_cnpj_column.HeaderText = "CPF_CNPJ";
+            this.cpf_cnpj_column.Name = "cpf_cnpj_column";
+            this.cpf_cnpj_column.ReadOnly = true;
+            // 
+            // nome_column
+            // 
+            this.nome_column.HeaderText = "Nome";
+            this.nome_column.Name = "nome_column";
+            this.nome_column.ReadOnly = true;
+            // 
+            // telefone_column
+            // 
+            this.telefone_column.HeaderText = "Telefone";
+            this.telefone_column.Name = "telefone_column";
+            this.telefone_column.ReadOnly = true;
+            // 
+            // e_mail_column
+            // 
+            this.e_mail_column.HeaderText = "e-mail";
+            this.e_mail_column.Name = "e_mail_column";
+            this.e_mail_column.ReadOnly = true;
+            // 
+            // cep_column
+            // 
+            this.cep_column.HeaderText = "CEP";
+            this.cep_column.Name = "cep_column";
+            this.cep_column.ReadOnly = true;
             // 
             // btnLocalizar
             // 
@@ -77,6 +119,7 @@
             this.btnLocalizar.TabIndex = 3;
             this.btnLocalizar.Text = "Localizar";
             this.btnLocalizar.UseVisualStyleBackColor = true;
+            this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
             // 
             // btnNovoChamado
             // 
@@ -114,23 +157,13 @@
             this.btnNovoCliente.TabIndex = 7;
             this.btnNovoCliente.Text = "Novo Cliente";
             this.btnNovoCliente.UseVisualStyleBackColor = true;
-            // 
-            // lnkLogout
-            // 
-            this.lnkLogout.AutoSize = true;
-            this.lnkLogout.Location = new System.Drawing.Point(676, 22);
-            this.lnkLogout.Name = "lnkLogout";
-            this.lnkLogout.Size = new System.Drawing.Size(40, 13);
-            this.lnkLogout.TabIndex = 8;
-            this.lnkLogout.TabStop = true;
-            this.lnkLogout.Text = "Logout";
+            this.btnNovoCliente.Click += new System.EventHandler(this.btnNovoCliente_Click);
             // 
             // frmLocalizarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lnkLogout);
             this.Controls.Add(this.btnNovoCliente);
             this.Controls.Add(this.btnCriarPerfil);
             this.Controls.Add(this.label1);
@@ -140,11 +173,11 @@
             this.Controls.Add(this.txtLocalizadorCliente);
             this.Controls.Add(this.cbPesquisa);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmLocalizarCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Localizar Cliente";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLocalizarCliente_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmLocalizarCliente_FormClosed);
             this.Load += new System.EventHandler(this.frmLocalizarCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwViewChamados)).EndInit();
             this.ResumeLayout(false);
@@ -162,6 +195,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCriarPerfil;
         private System.Windows.Forms.Button btnNovoCliente;
-        private System.Windows.Forms.LinkLabel lnkLogout;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cpf_cnpj_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nome_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefone_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn e_mail_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cep_column;
     }
 }

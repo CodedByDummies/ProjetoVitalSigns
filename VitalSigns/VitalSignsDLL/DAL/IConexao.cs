@@ -7,7 +7,7 @@ namespace VitalSignsDLL.DAL
     {
         ConnectionState AbrirConexao();
 
-        ConnectionState FecharConecao();
+        ConnectionState FecharConexao();
 
         int ExecutarSemConsulta(string cmd);
 

@@ -91,6 +91,7 @@
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(254, 20);
             this.txtLogin.TabIndex = 0;
+            this.txtLogin.TextChanged += new System.EventHandler(this.txtLogin_TextChanged);
             // 
             // pictureBox1
             // 

@@ -37,35 +37,35 @@ namespace VitalSigns.UI
                     {
                         case (int)Perfis.Administrador:
                             dataReader.Close();
-                            conexao.FecharConecao();
+                            conexao.FecharConexao();
                             this.Hide();
                             new frmLocalizarCliente(Perfis.Administrador).Show();
                             return;
 
                         case (int)Perfis.Gerente:
                             dataReader.Close();
-                            conexao.FecharConecao();
+                            conexao.FecharConexao();
                             this.Hide();
                             new frmLocalizarCliente(Perfis.Gerente).Show();
                             return;
 
                         case (int)Perfis.Atendente:
                             dataReader.Close();
-                            conexao.FecharConecao();
+                            conexao.FecharConexao();
                             this.Hide();
                             new frmLocalizarCliente(Perfis.Atendente).Show();
                             return;
 
                         case (int)Perfis.Tecnico_Alocado:
                             dataReader.Close();
-                            conexao.FecharConecao();
+                            conexao.FecharConexao();
                             this.Hide();
                             new frmLocalizarCliente(Perfis.Tecnico_Alocado).Show();
                             return;
 
                         case (int)Perfis.Técnico_Campo:
                             dataReader.Close();
-                            conexao.FecharConecao();
+                            conexao.FecharConexao();
                             this.Hide();
                             new frmLocalizarCliente(Perfis.Técnico_Campo).Show();
                             return;
@@ -73,9 +73,14 @@ namespace VitalSigns.UI
                 }
 
                 dataReader.Close();
-                conexao.FecharConecao();
+                conexao.FecharConexao();
                 MessageBox.Show("Usuário não identificado", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void txtLogin_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

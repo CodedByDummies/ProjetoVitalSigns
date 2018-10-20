@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using VitalSignsDLL.BLL;
+using VitalSignsDLL.DAL;
 
 namespace VitalSigns.UI
 {
@@ -32,23 +28,52 @@ namespace VitalSigns.UI
 
         private void frmLocalizarCliente_FormClosing(object sender, FormClosingEventArgs e)
         {
+            //DialogResult dr = MessageBox.Show("Deseja sair?", "Fechar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            Application.Exit();
         }
 
-        private void frmLocalizarCliente_FormClosed(object sender, FormClosedEventArgs e)
+        private void btnLocalizar_Click(object sender, EventArgs e)
         {
-            // DialogResult dr = MessageBox.Show("Deseja sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-        }
+            LimparGridView();
 
-        private void cbPesquisa_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            switch (cbPesquisa.SelectedItem.ToString())
+            IConexao conexao = new ConexaoMySQL();
+
+            if (conexao.AbrirConexao() == ConnectionState.Open)
             {
-                case "CPF": return;
-                case "CNPJ": return;
-                case "Chamado": return;
+                string cpf_cnpj = txtLocalizadorCliente.Text;
+                string sql = string.Format("SELECT cpf_cnpj,nome,telefone,e_mail,endereco_cep FROM clientes where cpf_cnpj = '{0}'", cpf_cnpj);
+                MySqlDataReader dataReader = (MySqlDataReader)conexao.ExecutarConsulta(sql);
+
+                if (dataReader.HasRows)
+                {
+                    while (dataReader.Read())
+                    {
+                        Clientes cliente = new Clientes();
+                        cliente.CPF_CNPJ = dataReader[0].ToString();
+                        cliente.Nome = dataReader[1].ToString();
+                        cliente.Telefone = dataReader[2].ToString();
+                        cliente.E_mail = dataReader[3].ToString();
+                        cliente.CEP = dataReader[4].ToString();
+                        dgwViewChamados.Rows.Add(new object[] { cliente.CPF_CNPJ, cliente.Nome, cliente.Telefone, cliente.E_mail, cliente.CEP });
+                    }
+                    dataReader.Close();
+                    conexao.FecharConexao();
+                    return;
+                }
+                dataReader.Close();
+                conexao.FecharConexao();
+                MessageBox.Show("Cliente não localizado", "Clientes", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
 
+        private void LimparGridView()
+        {
+            dgwViewChamados.Rows.Clear();
+        }
 
+        private void btnNovoCliente_Click(object sender, EventArgs e)
+        {
+            new frmCadastroCliente().ShowDialog();
         }
     }
 }

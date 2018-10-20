@@ -165,7 +165,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(33, 57);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(644, 316);
+            this.panel1.Size = new System.Drawing.Size(622, 303);
             this.panel1.TabIndex = 5;
             // 
             // cbEstadoCadastro
@@ -175,6 +175,7 @@
             this.cbEstadoCadastro.Name = "cbEstadoCadastro";
             this.cbEstadoCadastro.Size = new System.Drawing.Size(305, 21);
             this.cbEstadoCadastro.TabIndex = 5;
+            this.cbEstadoCadastro.SelectionChangeCommitted += new System.EventHandler(this.cbEstadoCadastro_SelectionChangeCommitted);
             // 
             // cbCidadeCadastro
             // 
@@ -331,6 +332,7 @@
             this.btnSalvarCadastroCliente.TabIndex = 6;
             this.btnSalvarCadastroCliente.Text = "Salvar";
             this.btnSalvarCadastroCliente.UseVisualStyleBackColor = true;
+            this.btnSalvarCadastroCliente.Click += new System.EventHandler(this.btnSalvarCadastroCliente_Click);
             // 
             // frmCadastroCliente
             // 
@@ -340,8 +342,11 @@
             this.Controls.Add(this.btnSalvarCadastroCliente);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmCadastroCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Cliente";
+            this.Load += new System.EventHandler(this.frmCadastroCliente_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
