@@ -43,7 +43,7 @@ namespace VitalSigns.UI
                 {
                     string cpf_cnpj = txtCpfCadastro.Text;
                     string nome = txtNomeCadastro.Text;
-                    string tel = txtTelefoneCadastro.Text;
+                    string tel = mtxtTelefoneCadastro.Text;
                     string e_mail = txtEmailCadastro.Text;
                     string insertCliente = string.Format("insert into Clientes values ('{0}', '{1}', '{2}', '{3}', '{4}')", cpf_cnpj, nome, tel, e_mail, cep);
 

@@ -43,8 +43,10 @@
             // 
             this.txtSenha.Location = new System.Drawing.Point(194, 289);
             this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(254, 20);
             this.txtSenha.TabIndex = 1;
+            this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
             // 
             // label1
             // 

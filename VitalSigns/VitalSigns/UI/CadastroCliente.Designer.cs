@@ -34,10 +34,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNomeCadastro = new System.Windows.Forms.TextBox();
-            this.txtCpfCadastro = new System.Windows.Forms.TextBox();
             this.txtEmailCadastro = new System.Windows.Forms.TextBox();
             this.txtDddTelCadastro = new System.Windows.Forms.TextBox();
-            this.txtTelefoneCadastro = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbEstadoCadastro = new System.Windows.Forms.ComboBox();
             this.cbCidadeCadastro = new System.Windows.Forms.ComboBox();
@@ -59,6 +57,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.btnSalvarCadastroCliente = new System.Windows.Forms.Button();
+            this.txtCpfCadastro = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtTelefoneCadastro = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,13 +105,6 @@
             this.txtNomeCadastro.Size = new System.Drawing.Size(608, 20);
             this.txtNomeCadastro.TabIndex = 1;
             // 
-            // txtCpfCadastro
-            // 
-            this.txtCpfCadastro.Location = new System.Drawing.Point(6, 66);
-            this.txtCpfCadastro.Name = "txtCpfCadastro";
-            this.txtCpfCadastro.Size = new System.Drawing.Size(229, 20);
-            this.txtCpfCadastro.TabIndex = 2;
-            // 
             // txtEmailCadastro
             // 
             this.txtEmailCadastro.Location = new System.Drawing.Point(241, 66);
@@ -126,19 +119,13 @@
             this.txtDddTelCadastro.Size = new System.Drawing.Size(51, 20);
             this.txtDddTelCadastro.TabIndex = 4;
             // 
-            // txtTelefoneCadastro
-            // 
-            this.txtTelefoneCadastro.Location = new System.Drawing.Point(63, 112);
-            this.txtTelefoneCadastro.Name = "txtTelefoneCadastro";
-            this.txtTelefoneCadastro.Size = new System.Drawing.Size(240, 20);
-            this.txtTelefoneCadastro.TabIndex = 5;
-            // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.mtxtTelefoneCadastro);
+            this.panel1.Controls.Add(this.txtCpfCadastro);
             this.panel1.Controls.Add(this.cbEstadoCadastro);
             this.panel1.Controls.Add(this.cbCidadeCadastro);
             this.panel1.Controls.Add(this.txtCelularCadastro);
-            this.panel1.Controls.Add(this.txtTelefoneCadastro);
             this.panel1.Controls.Add(this.txtNumeroCadastro);
             this.panel1.Controls.Add(this.txtDddCelularCadastro);
             this.panel1.Controls.Add(this.txtDddTelCadastro);
@@ -147,7 +134,6 @@
             this.panel1.Controls.Add(this.TxtCepCadastro);
             this.panel1.Controls.Add(this.txtBairroCadastro);
             this.panel1.Controls.Add(this.txtLougradouroCadastro);
-            this.panel1.Controls.Add(this.txtCpfCadastro);
             this.panel1.Controls.Add(this.txtNomeCadastro);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label10);
@@ -340,6 +326,22 @@
             this.btnSalvarCadastroCliente.UseVisualStyleBackColor = true;
             this.btnSalvarCadastroCliente.Click += new System.EventHandler(this.btnSalvarCadastroCliente_Click);
             // 
+            // txtCpfCadastro
+            // 
+            this.txtCpfCadastro.Location = new System.Drawing.Point(6, 66);
+            this.txtCpfCadastro.Mask = "000,000,000-00";
+            this.txtCpfCadastro.Name = "txtCpfCadastro";
+            this.txtCpfCadastro.Size = new System.Drawing.Size(229, 20);
+            this.txtCpfCadastro.TabIndex = 2;
+            // 
+            // mtxtTelefoneCadastro
+            // 
+            this.mtxtTelefoneCadastro.Location = new System.Drawing.Point(63, 112);
+            this.mtxtTelefoneCadastro.Mask = "00000-0000";
+            this.mtxtTelefoneCadastro.Name = "mtxtTelefoneCadastro";
+            this.mtxtTelefoneCadastro.Size = new System.Drawing.Size(240, 20);
+            this.mtxtTelefoneCadastro.TabIndex = 7;
+            // 
             // frmCadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -366,10 +368,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNomeCadastro;
-        private System.Windows.Forms.TextBox txtCpfCadastro;
         private System.Windows.Forms.TextBox txtEmailCadastro;
         private System.Windows.Forms.TextBox txtDddTelCadastro;
-        private System.Windows.Forms.TextBox txtTelefoneCadastro;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtCelularCadastro;
         private System.Windows.Forms.TextBox txtDddCelularCadastro;
@@ -391,5 +391,7 @@
         private System.Windows.Forms.Button btnSalvarCadastroCliente;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.MaskedTextBox txtCpfCadastro;
+        private System.Windows.Forms.MaskedTextBox mtxtTelefoneCadastro;
     }
 }
